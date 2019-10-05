@@ -1,6 +1,8 @@
 Tree Notation Frequently Asked Questions
 ========================================
 
+[View this on GitHub](https://github.com/treenotation/faq.treenotation.org).
+
 Below is a list of questions that are commonly asked by people who are new to <a href="https://treenotation.org/">Tree Notation</a>. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the [TreeNotation Subreddit](https://www.reddit.com/r/treenotation/).
 
 ## Overview
