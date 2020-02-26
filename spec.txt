@@ -2,12 +2,13 @@ A Tree Notation object is a sequence of bits/bytes/characters(hereafter abbrevia
 as chars). Tree Notation requires the definition of at least 2 special chars which turn
 an otherwise unstructured linear sequence of chars into a structured recursive tree object.
 
-Those 2 special chars are referred to as XI and YI. YI delimits nodes and XI is used
-to indicate the parent/child relationship between nodes.
+Those 3 special chars are referred to as nodeBreakSymbol, edgeSymbol, and wordBreakSymbol. nodeBreakSymbol delimits nodes and edgeSymbol is used to indicate the parent/child relationship between nodes. wordBreakSymbol delimits words in a string.
+
+With just nodeBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
 
 By convention those special characters are:
 
-YI
+nodeBreakSymbol
 newline character
 Keyboard: Enter Key
 Binary: 00001010
@@ -16,7 +17,7 @@ Decimal: 10
 As string: "\n"
 (Note: On Windows, "\r" is treated the same as any other non-special char)
 
-XI
+edgeSymbol
 space character
 Keyboard: Space Key
 Binary: 00100000
@@ -24,10 +25,8 @@ Hex: 20
 Decimal: 32
 As string: " "
 
-Often it is beneficial to define a third delimiter, ZI, which is used to
-separate words/cells on a line. By convention ZI is also a space. Although
-in theory ZI and XI can conflict, in practice, given a higher level Tree Language
-grammar, that does not happen.
+wordBreakSymbol by convention is the same as edgeSymbol. Although in theory edgeSymbol and wordBreakSymbol
+can conflict, in practice, given a higher level Tree Language grammar, that does not happen.
 
 The basic structure of a Tree Notation object is as follows:
 
@@ -36,7 +35,6 @@ interface TreeNode {
   children: TreeNode[]
   line: string
 }
-
 
 From those building blocks one can build higher level languages. The "Grammar Language"
 and code should be referenced to learn how to define and implement cells and higher level Tree Languages.
