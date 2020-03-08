@@ -1,5 +1,5 @@
 A Tree Notation object is a sequence of bits/bytes/characters(hereafter abbreviated
-as chars). Tree Notation requires the definition of at least 2 special chars which turn
+as chars). Tree Notation requires the definition of at least 2 special chars (and usually 3), which turn
 an otherwise unstructured linear sequence of chars into a structured recursive tree object.
 
 Those 3 special chars are referred to as nodeBreakSymbol, edgeSymbol, and wordBreakSymbol. nodeBreakSymbol delimits nodes and edgeSymbol is used to indicate the parent/child relationship between nodes. wordBreakSymbol delimits words in a string.
