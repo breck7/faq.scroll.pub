@@ -161,7 +161,7 @@ If you are familiar with Lisp terminology, you can think of words as atoms.
 
 Grammar files add the additional concept of **cells**, which can be thought of as placeholders and type information for words. Grammar files define new languages with **nodeTypes** and **cellTypes**. In the example language above, the word "true" would be in a boolean cell type.
 
-Here is a [longer spec](https://faq.treenotation.org/spec.txt).
+Here is a [longer spec](https://faq.treenotation.org/spec/).
 
 #### Does Tree Notation use tabs or spaces?
 
