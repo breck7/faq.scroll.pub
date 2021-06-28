@@ -1,6 +1,6 @@
 title Tree Notation Spec
 
-title3 Introduction to Two Dimensional Languages
+section Introduction to Two Dimensional Languages
 
 paragraph
  Tree Notation is a subset of a class of languages called two dimensional languages.
@@ -17,9 +17,9 @@ paragraph
  Tree Notation is a middle ground that utilitizes ideas from the two dimensional language
  world using present day technology.
 
-title2 Tree Notation Spec
+section Tree Notation Spec
 
-title4 The Data Structure
+subsection The Data Structure
 
 paragraph
  The basic structure of a Tree Notation object is as follows:
@@ -31,7 +31,7 @@ code
    children: TreeNode[]
  }
 
-title4 No Syntax Errors
+subsection No Syntax Errors
 
 paragraph
  All documents are valid Tree Notation documents. Like binary notation, there are no syntax errors in Tree Notation. For every possible string <i>abc</i>:
@@ -42,14 +42,14 @@ code
 paragraph
  Errors can only occur at a higher semantic level in <i>Tree Languages</i>.
 
-title4 Isomorphism to Spreadsheets
+subsection Isomorphism to Spreadsheets
 
 paragraph
  A program in Tree Notation is isomorphic to a spreadsheet. A single row is a node. Words are
  in cells. You can make a row a child of the row above it by indenting it with an additional blank
  cell in the head.
 
-title4 Special Symbols
+subsection Special Symbols
 
 paragraph
  A Tree Notation object is a sequence of bits/bytes/characters(hereafter abbreviated
@@ -106,7 +106,7 @@ paragraph
 paragraph
  This is currently the full spec of Tree Notation.
 
-title2 Tree Languages
+section Tree Languages
 
 paragraph
  The structure above defines Tree Notation. Tree Notation is a very basic notation. On top of
