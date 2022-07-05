@@ -95,7 +95,7 @@ code
 
 code
  edgeSymbol
- # by convention is the same as edgeSymbol above
+ # by convention is the same as wordBreakSymbol above
 
 paragraph
  For better interoperability with existing spreadsheet applications the tab character "\t" is often used for wordBreakSymbol and edgeSymbol.
