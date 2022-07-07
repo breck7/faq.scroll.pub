@@ -19,7 +19,7 @@
   <meta name="description" content="Frequently Asked Questions about Tree Notation"></meta>
   <meta name="generator" content="Scroll v25.2.1"></meta>
   <meta property="og:title" content="Tree Notation Frequently Asked Questions"></meta>
-  <meta property="og:description" content="Below is a list of questions that are commonly asked by people who are new to Tree Notation. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the TreeNotation Subreddit."></meta>
+  <meta property="og:description" content="Tree Notation is a basic building block that you can build higher level Tree Languages on top of. For programmers, this might give you an idea of the structure behind Tree notation:"></meta>
   <meta property="og:image" content=""></meta>
   <link rel="alternate" type="application/rss+xml" title="Tree Notation FAQ" href="https://faq.treenotation.org/feed.xml"></link>
   <meta name="twitter:card" content="summary_large_image"></meta>
@@ -255,7 +255,7 @@ code {
 </h1>
   <div class="scrollArticlePageComponent" style=""><h1 class="scrollTitleComponent"><a href="index.html">Tree Notation Frequently Asked Questions</a></h1>
 
-<p class="scrollParagraphComponent">Below is a list of questions that are commonly asked by people who are new to <a href="https://treenotation.org/">Tree Notation</a>. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the TreeNotation <a href="https://www.reddit.com/r/treenotation/">Subreddit</a>.</p>
+<p class="scrollParagraphComponent">Below is a list of questions that are commonly asked by people who are new to <a href="https://treenotation.org/">Tree Notation</a>. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the Tree Notation <a href="https://www.reddit.com/r/treenotation/">Subreddit</a>.</p>
 
 <h3 class="scrollSectionComponent">Overview</h3>
 
@@ -304,7 +304,7 @@ interface TreeNode {
 
 <h4 class="scrollQuestionComponent">What is special about Tree Notation?</h4>
 
-<p class="scrollParagraphComponent">Tree Notation may seem similar to notations like JSON, XML, YAML or S-expressions. However, Tree Notation is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Tree Notation substantially different and may cause a _significant improvement_ in computing.</p>
+<p class="scrollParagraphComponent">Tree Notation may seem similar to notations like JSON, XML, YAML or S-expressions. However, Tree Notation is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Tree Notation substantially different and may cause a <em>significant improvement</em> in computing.</p>
 
 <h4 class="scrollQuestionComponent">What major problems in computer science does help Tree Notation solve?</h4>
 
@@ -318,7 +318,7 @@ interface TreeNode {
 
 <h4 class="scrollQuestionComponent">What is a basic example of Tree Notation for file formats?</h4>
 
-<p class="scrollParagraphComponent">Currently all Node.js npm projects contain a "package.json" file. While this is simple, it could be simpler using Tree Notation, and better. Let's take a look. package.json:</p>
+<p class="scrollParagraphComponent">Currently all Node.js npm projects contain a <code>package.json</code> file. While this is simple, it could be simpler using Tree Notation, and better. Let's take a look. package.json:</p>
 
 <code class="scrollCodeBlockComponent">{
   "name": "mypackage"
@@ -339,7 +339,7 @@ repository
  type git
  url git://github.com/username/mypackage</code>
 
-<p class="scrollParagraphComponent">It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our "package.npm" grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.</p>
+<p class="scrollParagraphComponent">It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our <code>package.npm</code> grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.</p>
 
 <p class="scrollParagraphComponent">Note: the JSON example above works correctly, but JSON and Tree Notation are not equivalent by default, since JSON does not support certain structures and Tree Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Tree Language such as <a href="https://jtree.treenotation.org/designer/#standard%20dug">Dug</a> that has a 1-to-1 relationship to JSON.</p>
 
@@ -365,7 +365,7 @@ repository
 
 <h4 class="scrollQuestionComponent">How can I build a new Tree Language?</h4>
 
-<p class="scrollParagraphComponent">A good place to start is with our simple <a href="http://jtree.treenotation.org/designer/">Tree Language Builder</a>.</p>
+<p class="scrollParagraphComponent">A good place to start is with our simple <http://jtree.treenotation.org/designer/>Tree Language Builder</http://jtree.treenotation.org/designer/>.</p>
 
 <h4 class="scrollQuestionComponent">Where can I use Tree Notation?</h4>
 
@@ -383,7 +383,7 @@ repository
 
 <h4 class="scrollQuestionComponent">What is the difference between Tree Notation and Tree Languages?</h4>
 
-<p class="scrollParagraphComponent">There is an important distinction between _Tree Notation_ and _Tree Languages_. Tree Notation is a simple dumb format for encoding Tree Data structures. Tree Languages give you higher level semantics. There is not a single general purpose "Tree Language", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Tree Languages" with any semantics desired by the language designer(s).</p>
+<p class="scrollParagraphComponent">There is an important distinction between <em>Tree Notation</em> and <em>Tree Languages</em>. Tree Notation is a simple dumb format for encoding Tree Data structures. Tree Languages give you higher level semantics. There is not a single general purpose "Tree Language", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Tree Languages" with any semantics desired by the language designer(s).</p>
 
 <h4 class="scrollQuestionComponent">What are the data structures in Tree Notation?</h4>
 
@@ -397,7 +397,7 @@ interface TreeNode {
   line: string
 }</code>
 
-<p class="scrollParagraphComponent">The Tree is _the_ data structure in Tree Notation. Types like booleans, ints and vectors only exist at the higher level Tree Language level. The theory behind Tree Notation is that concepts like booleans, ints and vectors are just kinds of Trees.</p>
+<p class="scrollParagraphComponent">The Tree is <em>the</em> data structure in Tree Notation. Types like booleans, ints and vectors only exist at the higher level Tree Language level. The theory behind Tree Notation is that concepts like booleans, ints and vectors are just kinds of Trees.</p>
 
 <p class="scrollParagraphComponent">Higher level Tree Languages are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.</p>
 
@@ -408,11 +408,11 @@ interface TreeNode {
 <code class="scrollCodeBlockComponent">if true
  print Hello world</code>
 
-<p class="scrollParagraphComponent">In Tree Notation, the units of measure are **words** and **nodes**. Each line is equal to one node. The example program above has 5 words and 2 nodes. In this language the nodeType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print node a **child node** of the line above it, the if node.</p>
+<p class="scrollParagraphComponent">In Tree Notation, the units of measure are <strong>words</strong> and <strong>nodes</strong>. Each line is equal to one node. The example program above has 5 words and 2 nodes. In this language the nodeType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print node a <strong>child node</strong> of the line above it, the if node.</p>
 
 <p class="scrollParagraphComponent">If you are familiar with Lisp terminology, you can think of words as atoms.</p>
 
-<p class="scrollParagraphComponent">Grammar files add the additional concept of **cells**, which can be thought of as placeholders and type information for words. Grammar files define new languages with **nodeTypes** and **cellTypes**. In the example language above, the word "true" would be in a boolean cell type.</p>
+<p class="scrollParagraphComponent">Grammar files add the additional concept of <strong>cells</strong>, which can be thought of as placeholders and type information for words. Grammar files define new languages with <strong>nodeTypes</strong> and <strong>cellTypes</strong>. In the example language above, the word "true" would be in a boolean cell type.</p>
 
 <p class="scrollParagraphComponent">Here is a longer <a href="spec.html">spec</a>.</p>
 
@@ -422,7 +422,7 @@ interface TreeNode {
 
 <h4 class="scrollQuestionComponent">Does Tree Notation work on Windows?</h4>
 
-<p class="scrollParagraphComponent">Yes. Tree Notation only uses the "\n" character to separate nodes/lines. "\r" is either ignored or treated as a content character. In practice it's easier to drop all "\r" :).</p>
+<p class="scrollParagraphComponent">Yes. Tree Notation only uses the <code>\n</code> character to separate nodes/lines. <code>\r</code> is either ignored or treated as a content character. In practice it's easier to drop all <code>\r</code> :).</p>
 
 <h4 class="scrollQuestionComponent">Does Tree Notation support Unicode or just ASCII?</h4>
 
@@ -466,10 +466,6 @@ interface TreeNode {
 
 <p class="scrollParagraphComponent">Thank you for asking! There's plenty of work to be done. Particularly important needs now are someone with project management skills to help organize and lead the team, someone to do community organizing/evangelism, dev leads to make libraries in various languages, testers to do cross platform testing, and more. Get in touch if you want to help.</p>
 
-<h4 class="scrollQuestionComponent">How is the Tree Notation Lab funded?</h4>
-
-<p class="scrollParagraphComponent">The Tree Notation Lab is funded entirely by anonymous gifts. You can donate bitcoin to the Tree Notation Lab at this address: 36DMShMSDUp19FnshHZDnoVCGrAYCrowfN</p>
-
 <h3 class="scrollSectionComponent">Editing Tips</h3>
 
 <h4 class="scrollQuestionComponent">How can I copy and paste code in Tree Notation and have the editor ensure correct indentation?</h4>
@@ -506,7 +502,7 @@ interface TreeNode {
 
 <h4 class="scrollQuestionComponent">What's an example of "ad hoc" parsing that you can do with Tree Notation that you cannot do with S-Expressions?</h4>
 
-<p class="scrollParagraphComponent">If you have a Tree Language with a root nodeType named "folder", and you want to rename the keyword of that nodeType to "project", you can easily do it with an ad-hoc regex: s/^folder/project/. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.</p>
+<p class="scrollParagraphComponent">If you have a Tree Language with a root nodeType named <code>folder</code>, and you want to rename the keyword of that nodeType to <code>project</code>, you can easily do it with an ad-hoc regex: <code>s/^folder/project/</code>. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.</p>
 
 <h4 class="scrollQuestionComponent">What's something else you can do with Tree Notation that you can't do with Lisp?</h4>
 
@@ -522,7 +518,7 @@ interface TreeNode {
 
 <p class="scrollParagraphComponent">You can read the half-baked <a href="https://github.com/treenotation/research/tree/master/papers">papers</a> about Tree Notation.</p>
 
-<p class="scrollParagraphComponent">The basic gist of the theory is that all structures are trees, Tree Notation is all you need to represent trees, and by building things up from Tree Notation we might be able to make things simpler _AND better_.</p>
+<p class="scrollParagraphComponent">The basic gist of the theory is that all structures are trees, Tree Notation is all you need to represent trees, and by building things up from Tree Notation we might be able to make things simpler <em>AND better</em>.</p>
 
 <h4 class="scrollQuestionComponent">Which language influenced Tree Notation the most?</h4>
 
