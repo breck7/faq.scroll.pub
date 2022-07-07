@@ -1,7 +1,9 @@
 title Tree Notation Frequently Asked Questions
 
-paragraph
- Below is a list of questions that are commonly asked by people who are new to <a href="https://treenotation.org/">Tree Notation</a>. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the TreeNotation Subreddit🔗www.reddit.com/r/treenotation/.
+aftertext
+ Below is a list of questions that are commonly asked by people who are new to Tree Notation. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the Tree Notation Subreddit.
+ https://treenotation.org/ Tree Notation
+ https://www.reddit.com/r/treenotation/ Subreddit
 
 section Overview
 
@@ -65,8 +67,9 @@ paragraph
 
 question What is special about Tree Notation?
 
-paragraph
+aftertext
  Tree Notation may seem similar to notations like JSON, XML, YAML or S-expressions. However, Tree Notation is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Tree Notation substantially different and may cause a _significant improvement_ in computing.
+ wrapsOn
 
 question What major problems in computer science does help Tree Notation solve?
 
@@ -80,8 +83,9 @@ paragraph
 
 question What is a basic example of Tree Notation for file formats?
 
-paragraph
- Currently all Node.js npm projects contain a "package.json" file. While this is simple, it could be simpler using Tree Notation, and better. Let's take a look. package.json:
+aftertext
+ Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Tree Notation, and better. Let's take a look. package.json:
+ wrapsOn
 
 code
  {
@@ -105,8 +109,9 @@ code
   type git
   url git://github.com/username/mypackage
 
-paragraph
- It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our "package.npm" grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.
+aftertext
+ It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.npm` grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.
+ wrapsOn
 
 paragraph
  Note: the JSON example above works correctly, but JSON and Tree Notation are not equivalent by default, since JSON does not support certain structures and Tree Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Tree Language such as Dug🔗jtree.treenotation.org/designer/#standard%20dug that has a 1-to-1 relationship to JSON.
@@ -140,8 +145,9 @@ paragraph
 
 question How can I build a new Tree Language?
 
-paragraph
- A good place to start is with our simple <a href="http://jtree.treenotation.org/designer/">Tree Language Builder</a>.
+aftertext
+ A good place to start is with our simple $Tree Language Builder$.
+ wrap $ http://jtree.treenotation.org/designer/
 
 question Where can I use Tree Notation?
 
@@ -162,8 +168,9 @@ section Structure
 
 question What is the difference between Tree Notation and Tree Languages?
 
-paragraph
+aftertext
  There is an important distinction between _Tree Notation_ and _Tree Languages_. Tree Notation is a simple dumb format for encoding Tree Data structures. Tree Languages give you higher level semantics. There is not a single general purpose "Tree Language", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Tree Languages" with any semantics desired by the language designer(s).
+ wrapsOn
 
 question What are the data structures in Tree Notation?
 
@@ -179,8 +186,9 @@ code
    line: string
  }
 
-paragraph
+aftertext
  The Tree is _the_ data structure in Tree Notation. Types like booleans, ints and vectors only exist at the higher level Tree Language level. The theory behind Tree Notation is that concepts like booleans, ints and vectors are just kinds of Trees.
+ wrapsOn
 
 paragraph
  Higher level Tree Languages are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
@@ -194,14 +202,16 @@ code
  if true
   print Hello world
 
-paragraph
- In Tree Notation, the units of measure are **words** and **nodes**. Each line is equal to one node. The example program above has 5 words and 2 nodes. In this language the nodeType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print node a **child node** of the line above it, the if node.
+aftertext
+ In Tree Notation, the units of measure are *words* and *nodes*. Each line is equal to one node. The example program above has 5 words and 2 nodes. In this language the nodeType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print node a *child node* of the line above it, the if node.
+ wrapsOn
 
 paragraph
  If you are familiar with Lisp terminology, you can think of words as atoms.
 
-paragraph
- Grammar files add the additional concept of **cells**, which can be thought of as placeholders and type information for words. Grammar files define new languages with **nodeTypes** and **cellTypes**. In the example language above, the word "true" would be in a boolean cell type.
+aftertext
+ Grammar files add the additional concept of *cells*, which can be thought of as placeholders and type information for words. Grammar files define new languages with *nodeTypes* and *cellTypes*. In the example language above, the word "true" would be in a boolean cell type.
+ wrapsOn
 
 aftertext
  Here is a longer spec.
@@ -214,8 +224,9 @@ paragraph
 
 question Does Tree Notation work on Windows?
 
-paragraph
- Yes. Tree Notation only uses the "\n" character to separate nodes/lines. "\r" is either ignored or treated as a content character. In practice it's easier to drop all "\r" :).
+aftertext
+ Yes. Tree Notation only uses the `\n` character to separate nodes/lines. `\r` is either ignored or treated as a content character. In practice it's easier to drop all `\r` :).
+ wrapsOn
 
 question Does Tree Notation support Unicode or just ASCII?
 
@@ -271,11 +282,6 @@ question How can I help?
 paragraph
  Thank you for asking! There's plenty of work to be done. Particularly important needs now are someone with project management skills to help organize and lead the team, someone to do community organizing/evangelism, dev leads to make libraries in various languages, testers to do cross platform testing, and more. Get in touch if you want to help.
 
-question How is the Tree Notation Lab funded?
-
-paragraph
- The Tree Notation Lab is funded entirely by anonymous gifts. You can donate bitcoin to the Tree Notation Lab at this address: 36DMShMSDUp19FnshHZDnoVCGrAYCrowfN
-
 section Editing Tips
 
 question How can I copy and paste code in Tree Notation and have the editor ensure correct indentation?
@@ -319,8 +325,9 @@ paragraph
 
 question What's an example of "ad hoc" parsing that you can do with Tree Notation that you cannot do with S-Expressions?
 
-paragraph
- If you have a Tree Language with a root nodeType named "folder", and you want to rename the keyword of that nodeType to "project", you can easily do it with an ad-hoc regex: s/^folder/project/. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
+aftertext
+ If you have a Tree Language with a root nodeType named `folder`, and you want to rename the keyword of that nodeType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
+ wrapsOn
 
 question What's something else you can do with Tree Notation that you can't do with Lisp?
 
@@ -339,8 +346,9 @@ question Are there any papers written about Tree Notation?
 paragraph
  You can read the half-baked papers🔗github.com/treenotation/research/tree/master/papers about Tree Notation.
 
-paragraph
+aftertext
  The basic gist of the theory is that all structures are trees, Tree Notation is all you need to represent trees, and by building things up from Tree Notation we might be able to make things simpler _AND better_.
+ wrapsOn
 
 question Which language influenced Tree Notation the most?
 
