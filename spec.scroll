@@ -1,4 +1,6 @@
+import header.scroll
 title Tree Notation Spec
+startColumns 4
 
 # Introduction to Two Dimensional Languages
 
@@ -16,9 +18,7 @@ title Tree Notation Spec
 # Tree Notation Spec
 
 ## The Data Structure
-
 * The basic structure of a Tree Notation object is as follows:
-
 code
  interface TreeNode {
    parent: &TreeNode
@@ -27,37 +27,26 @@ code
  }
 
 ## No Syntax Errors
-
-* All documents are valid Tree Notation documents. Like binary notation, there are no syntax errors in Tree Notation. For every possible string <i>abc</i>:
-
+* All documents are valid Tree Notation documents. Like binary notation, there are no syntax errors in Tree Notation. For every possible string _abc_:
 code
  new TreeNotation(abc).toString() === abc
 
-* Errors can only occur at a higher semantic level in <i>Tree Languages</i>.
+* Errors can only occur at a higher semantic level in _Tree Languages_.
 
 ## Isomorphism to Spreadsheets
-
-* A program in Tree Notation is isomorphic to a spreadsheet. A single row is a node. Words are
- in cells. You can make a row a child of the row above it by indenting it with an additional blank
- cell in the head.
+* A program in Tree Notation is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
 
 ## Special Symbols
-
-* A Tree Notation object is a sequence of bits/bytes/characters(hereafter abbreviated
- as chars). Tree Notation requires the definition of 3 special chars, which turn
- an otherwise unstructured linear sequence of chars into a structured recursive tree object.
+* A Tree Notation object is a sequence of bits/bytes/characters(hereafter abbreviated as chars). Tree Notation requires the definition of 3 special chars, which turn an otherwise unstructured linear sequence of chars into a structured recursive tree object.
 
 * Those 3 special chars are:
+- nodeBreakSymbol
+- wordBreakSymbol
+- edgeSymbol
 
-list
- - nodeBreakSymbol
- - wordBreakSymbol
- - edgeSymbol
+* *nodeBreakSymbol* delimits nodes (lines), *wordBreakSymbol* delimits words (cells), and *edgeSymbol* is used to indicate the parent/child relationship between nodes.
 
-* nodeBreakSymbol delimits nodes (lines), wordBreakSymbol delimits words (cells), and edgeSymbol is used to indicate the parent/child relationship between nodes.
-
-* With just nodeBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the
- parent/child concept.
+* With just nodeBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
 
 * By convention those special symbols are:
 
@@ -84,19 +73,18 @@ code
  edgeSymbol
  # by convention is the same as wordBreakSymbol above
 
-* For better interoperability with existing spreadsheet applications the tab character "\t" is often used for wordBreakSymbol and edgeSymbol.
+* For better interoperability with existing spreadsheet applications the tab character `\t` is often used for wordBreakSymbol and edgeSymbol.
 
 * Although in theory edgeSymbol and wordBreakSymbol can conflict, in practice, given a higher level Tree Language grammar, that does not happen.
 
 * This is currently the full spec of Tree Notation.
 
 # Tree Languages
+* The structure above defines Tree Notation. Tree Notation is a very basic notation. On top of Tree Notation, people build _Tree Languages_. You can see examples of higher level Tree Languages in the Tree Language Designer.
+ https://jtree.treenotation.org/designer/ Tree Language Designer
 
-* The structure above defines Tree Notation. Tree Notation is a very basic notation. On top of
- Tree Notation, people build <b>Tree Languages</b>. You can see examples of higher level
- Tree Languages <a href="https://jtree.treenotation.org/designer/">here</a>.
+* The Grammar Language is an advanced Tree Language for building other Tree Languages. This spec is written in a Tree Language called Scroll.
+ https://jtree.treenotation.org/designer/#standard%20grammar Grammar Language
+ https://github.com/publicdomaincompany/scroll/blob/master/scrolldown.grammar Scroll
 
-* The <a href="https://jtree.treenotation.org/designer/#standard%20grammar">Grammar Language</a> is an advanced Tree Language for building other Tree Languages. This spec is written in a Tree Language called <a href="https://github.com/publicdomaincompany/scroll/blob/master/scrolldown.grammar">Scrolldown</a>.
-
-skipIndexPage
-maxColumns 2
+import footer.scroll

@@ -1,0 +1,9 @@
+importOnly
+description Frequently Asked Questions about Tree Notation
+git https://github.com/treenotation/faq.treenotation.org
+viewSourceUrl https://github.com/treenotation/faq.treenotation.org/blob/main
+email faq@treenotation.org
+baseUrl https://faq.treenotation.org/
+metaTags
+scrollCssTag
+scrollHeader
