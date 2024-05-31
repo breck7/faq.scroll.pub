@@ -1,16 +1,16 @@
 import header.scroll
-title Tree Notation Frequently Asked Questions
+title Scroll Notation Frequently Asked Questions
 permalink index.html
 startColumns 4
 
-* Below is a list of questions that are commonly asked by people who are new to Tree Notation. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the Tree Notation Subreddit.
- https://treenotation.org/ Tree Notation
+* Below is a list of questions that are commonly asked by people who are new to Scroll Notation. If you have a question not listed here please ask us by filing an issue, sending a pull request, or posting a message to the Scroll Notation Subreddit.
+ https://notation.scroll.pub/ Scroll Notation
  https://www.reddit.com/r/treenotation/ Subreddit
 
 # Overview
 
-? What is Tree Notation?
-* Tree Notation is a basic building block that you can build higher level Tree Languages on top of. For programmers, this might give you an idea of the structure behind Tree notation:
+? What is Scroll Notation?
+* Scroll Notation is a basic building block that you can build higher level Tree Languages on top of. For programmers, this might give you an idea of the structure behind Scroll Notation:
 
 code
  nodeBreakSymbol = "\n" // New lines separate nodes
@@ -31,38 +31,38 @@ code
   body
    div おはようございます
 
-* One important feature of Tree Notation is that due to its simplicity and consistency, Tree Languages are easy to write - and code or information represented in a Tree Language is easy to syntax check (and highlight) - and autocomplete.
+* One important feature of Scroll Notation is that due to its simplicity and consistency, Tree Languages are easy to write - and code or information represented in a Tree Language is easy to syntax check (and highlight) - and autocomplete.
 
 * (Thank you to @vakradrz for this answer)
 
 ? There are already over 10,000 programming languages and over 1,000 syntax systems like JSON, XML and BNF, why create another one?
-* There is only 1 binary. Tree Notation is more like binary than it is like a programming language. Tree Notation is a basic building block that you can build higher level languages on top of. Tree Notation is an error-free base notation like binary.
+* There is only 1 binary. Scroll Notation is more like binary than it is like a programming language. Scroll Notation is a basic building block that you can build higher level languages on top of. Scroll Notation is an error-free base notation like binary.
 * This is our current stack of computer languages:
 quote
  1 Binary => 1,000+ Syntaxes => 10,000+ languages
 * In the future we think the stack may look like this:
 quote
- 1 Binary => 1 Tree Notation => 10,000+ Tree Languages
+ 1 Binary => 1 Scroll Notation => 10,000+ Tree Languages
 
-* We all use software tools to build software. Tree Notation makes building these tools easier, and as more people join the Tree Notation ecosystem there may be significant network effects. If Jane is building a Tree Language and tools for automating train schedules, and John is building a Tree Language and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
+* We all use software tools to build software. Scroll Notation makes building these tools easier, and as more people join the Scroll Notation ecosystem there may be significant network effects. If Jane is building a Tree Language and tools for automating train schedules, and John is building a Tree Language and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
 
-? What's the difference between Tree Notation and Tree Languages?
-* Tree Notation is a base level notation. Generally users use Tree Languages, which make Tree Notation useful. The Tree Language Grammar is a tool to make it easier to build Tree Languages.
- https://jtree.treenotation.org/designer/#standard%20grammar Grammar
+? What's the difference between Scroll Notation and Tree Languages?
+* Scroll Notation is a base level notation. Generally users use Tree Languages, which make Scroll Notation useful. The Tree Language Grammar is a tool to make it easier to build Tree Languages.
+ https://sdk.scroll.pub/designer/#standard%20grammar Grammar
 
-? What is special about Tree Notation?
-* Tree Notation may seem similar to notations like JSON, XML, YAML or S-expressions. However, Tree Notation is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Tree Notation substantially different and may cause a _significant improvement_ in computing.
+? What is special about Scroll Notation?
+* Scroll Notation may seem similar to notations like JSON, XML, YAML or S-expressions. However, Scroll Notation is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Scroll Notation substantially different and may cause a _significant improvement_ in computing.
 
-? What major problems in computer science does help Tree Notation solve?
-- 1. Program synthesis. Tree Notation makes it easier to train AI models to write great code. Deep Learning models are only as good as the data you train it on. Tree Notation code is noiseless, clean data, which we posit will enable a 10x+ improvement over the state-of-the-art of AI programs that write code and/or assist users in writing code.
-- 2. Clean data. In data science a rule of thumb is that 20% of your time will go toward doing data science, and 80% of your time will go toward getting, cleaning, and organizing data. Tree Notation offers a number of techniques that, coupled with network effects, could greatly reduce time wasted on cleaning data.
-- 3. Visual programming. Tree Notation is the first notation where a visual design tool could generate code as minimal as someone could write by hand. Traditional languages have a critical flaw--there are infinite ways to represent any given structure. In Tree Notation there is only 1 way to represent 1 structure. This simplification is one of a few core reasons why Tree Notation could help solve the Visual Programming problem.
+? What major problems in computer science does help Scroll Notation solve?
+- 1. Program synthesis. Scroll Notation makes it easier to train AI models to write great code. Deep Learning models are only as good as the data you train it on. Scroll Notation code is noiseless, clean data, which we posit will enable a 10x+ improvement over the state-of-the-art of AI programs that write code and/or assist users in writing code.
+- 2. Clean data. In data science a rule of thumb is that 20% of your time will go toward doing data science, and 80% of your time will go toward getting, cleaning, and organizing data. Scroll Notation offers a number of techniques that, coupled with network effects, could greatly reduce time wasted on cleaning data.
+- 3. Visual programming. Scroll Notation is the first notation where a visual design tool could generate code as minimal as someone could write by hand. Traditional languages have a critical flaw--there are infinite ways to represent any given structure. In Scroll Notation there is only 1 way to represent 1 structure. This simplification is one of a few core reasons why Scroll Notation could help solve the Visual Programming problem.
 
-* The data science app Ohayo is in part an experiment to test these 3 advantages of Tree Notation.
- https://github.com/treenotation/ohayo Ohayo
+* The data science app Ohayo is in part an experiment to test these 3 advantages of Scroll Notation.
+ https://github.com/breck7/ohayo Ohayo
 
-? What is a basic example of Tree Notation for file formats?
-* Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Tree Notation, and better. Let's take a look.
+? What is a basic example of Scroll Notation for file formats?
+* Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Scroll Notation, and better. Let's take a look.
 * package.json:
 code
  {
@@ -85,11 +85,11 @@ code
 
 * It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.npm` grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.
 
-* Note: the JSON example above works correctly, but JSON and Tree Notation are not equivalent by default, since JSON does not support certain structures and Tree Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Tree Language such as Dug that has a 1-to-1 relationship to JSON.
- https://jtree.treenotation.org/designer/#standard%20dug Dug
+* Note: the JSON example above works correctly, but JSON and Scroll Notation are not equivalent by default, since JSON does not support certain structures and Scroll Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Tree Language such as Dug that has a 1-to-1 relationship to JSON.
+ https://sdk.scroll.pub/designer/#standard%20dug Dug
 
-? What is a basic example of Tree Notation for programming languages?
-* In the example below, Tree Notation is used as a base for a math Tree Language where traditionally S-Expressions/Lisp might be used.
+? What is a basic example of Scroll Notation for programming languages?
+* In the example below, Scroll Notation is used as a base for a math Tree Language where traditionally S-Expressions/Lisp might be used.
 * make8.math:
 code
  multiply
@@ -100,31 +100,31 @@ code
  (* (+ 1 1) (+ 2 2))
 * The second example contains 13 parts, whereas the first only has 7. There are also infinite ways to represent the second example, since the compiler ignores insignificant whitespace, whereas in the first there is only 1 way to represent that particular structure.
 
-? What are some advanced examples of Tree Notation in action?
+? What are some advanced examples of Scroll Notation in action?
 * Check out the Ohayo project or the Tree Language Designer.
- https://github.com/treenotation/ohayo Ohayo
- https://jtree.treenotation.org/designer/ Tree Language Designer
+ https://github.com/breck7/ohayo Ohayo
+ https://sdk.scroll.pub/designer/ Tree Language Designer
 
 ? How can I build a new Tree Language?
 * A good place to start is with our simple $Tree Language Builder$.
- wrap $ http://jtree.treenotation.org/designer/
+ wrap $ http://sdk.scroll.pub/designer/
 
-? Where can I use Tree Notation?
-* Everywhere! Anywhere you use programming languages or encodings, you can use Tree Notation. Hopefully a Tree Notation Ecosystem will grow, if Tree Notation turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
+? Where can I use Scroll Notation?
+* Everywhere! Anywhere you use programming languages or encodings, you can use Scroll Notation. Hopefully a Scroll Notation Ecosystem will grow, if Scroll Notation turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
 
 ? What are some examples of Tree Languages?
-* There are over a dozen <a href="https://github.com/treenotation/jtree/tree/master/langs">example languages</a> in the JTree GitHub repo. Here's a language that compiles to <a href="https://jtree.treenotation.org/designer/#standard%20stump">HTML</a>, a <a href="https://jtree.treenotation.org/designer/#standard%20project">language similar to Make</a>, and a <a href="https://jtree.treenotation.org/designer/#standard%20numbers">language that does simple math </a>.
+* There are over a dozen <a href="https://github.com/breck7/jtree/tree/master/langs">example languages</a> in the JTree GitHub repo. Here's a language that compiles to <a href="https://sdk.scroll.pub/designer/#standard%20stump">HTML</a>, a <a href="https://sdk.scroll.pub/designer/#standard%20project">language similar to Make</a>, and a <a href="https://sdk.scroll.pub/designer/#standard%20numbers">language that does simple math </a>.
 
 ? Languages that add numbers or compile to HTML are cute, but are there any advanced Tree Language?
-* Currently the most advanced somewhat-useful Tree Language is OhayoLang, the dataflow language in the data science studio <a href="https://ohayo.computer/">Ohayo</a>. In 2023, OhayoLang could be a competitive rival to Python or R for 80% of data science tasks. Another very powerful language is <a href="https://jtree.treenotation.org/designer/#standard%20grammar">Grammar</a>, which is similar to ANTLR or Racket in that it's a language for building languages. However, in 2023 the most powerful Tree Language could be yours!
+* Currently the most advanced somewhat-useful Tree Language is OhayoLang, the dataflow language in the data science studio <a href="https://ohayo.computer/">Ohayo</a>. In 2023, OhayoLang could be a competitive rival to Python or R for 80% of data science tasks. Another very powerful language is <a href="https://sdk.scroll.pub/designer/#standard%20grammar">Grammar</a>, which is similar to ANTLR or Racket in that it's a language for building languages. However, in 2023 the most powerful Tree Language could be yours!
 
 # Structure
 
-? What is the difference between Tree Notation and Tree Languages?
-* There is an important distinction between _Tree Notation_ and _Tree Languages_. Tree Notation is a simple dumb format for encoding Tree Data structures. Tree Languages give you higher level semantics. There is not a single general purpose "Tree Language", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Tree Languages" with any semantics desired by the language designer(s).
+? What is the difference between Scroll Notation and Tree Languages?
+* There is an important distinction between _Scroll Notation_ and _Tree Languages_. Scroll Notation is a simple dumb format for encoding Tree Data structures. Tree Languages give you higher level semantics. There is not a single general purpose "Tree Language", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Tree Languages" with any semantics desired by the language designer(s).
 
-? What are the data structures in Tree Notation?
-* This is the base Tree Notation:
+? What are the data structures in Scroll Notation?
+* This is the base Scroll Notation:
 code
  nodeBreakSymbol = "\n" // New lines separate nodes
  edgeSymbol = " " // Increasing indent to denote parent/child relationship
@@ -134,17 +134,17 @@ code
    line: string
  }
 
-* The Tree is _the_ data structure in Tree Notation. Types like booleans, ints and vectors only exist at the higher level Tree Language level. The theory behind Tree Notation is that concepts like booleans, ints and vectors are just kinds of Trees.
+* The Tree is _the_ data structure in Scroll Notation. Types like booleans, ints and vectors only exist at the higher level Tree Language level. The theory behind Scroll Notation is that concepts like booleans, ints and vectors are just kinds of Trees.
 
 * Higher level Tree Languages are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
 
-? What are the basic terms when talking about things written in Tree Notation?
+? What are the basic terms when talking about things written in Scroll Notation?
 * Example:
 code
  if true
   print Hello world
 
-* In Tree Notation, the units of measure are *words* and *nodes*. Each line is equal to one node. The example program above has 5 words and 2 nodes. In this language the nodeType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print node a *child node* of the line above it, the if node.
+* In Scroll Notation, the units of measure are *words* and *nodes*. Each line is equal to one node. The example program above has 5 words and 2 nodes. In this language the nodeType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print node a *child node* of the line above it, the if node.
 
 * If you are familiar with Lisp terminology, you can think of words as atoms.
 
@@ -153,41 +153,41 @@ code
 * Here is a longer spec.
  link spec.html spec
 
-? Does Tree Notation use tabs or spaces?
-* Tree Notation uses a single space to indent blocks which indicates parent/child relationship. You can only increase the indent level one level at a time.
+? Does Scroll Notation use tabs or spaces?
+* Scroll Notation uses a single space to indent blocks which indicates parent/child relationship. You can only increase the indent level one level at a time.
 
-? Does Tree Notation work on Windows?
-* Yes. Tree Notation only uses the `\n` character to separate nodes/lines. `\r` is either ignored or treated as a content character. In practice it's easier to drop all `\r` :).
+? Does Scroll Notation work on Windows?
+* Yes. Scroll Notation only uses the `\n` character to separate nodes/lines. `\r` is either ignored or treated as a content character. In practice it's easier to drop all `\r` :).
 
-? Does Tree Notation support Unicode or just ASCII?
-* Tree Notation supports all encodings. This is perfectly valid Tree Notation:
+? Does Scroll Notation support Unicode or just ASCII?
+* Scroll Notation supports all encodings. This is perfectly valid Scroll Notation:
 code
  html
   body
    div おはようございます
 
-* In fact, there is no such thing as an invalid Tree Notation document at the base level, just as there is no such thing as an "invalid binary sequence".
+* In fact, there is no such thing as an invalid Scroll Notation document at the base level, just as there is no such thing as an "invalid binary sequence".
 
-* Usually when using Tree Notation you use a higher level grammar, called a Tree Language, and so you can still have invalid programs in that language (because of typos, for example) even though your Tree Notation is valid.
+* Usually when using Scroll Notation you use a higher level grammar, called a Tree Language, and so you can still have invalid programs in that language (because of typos, for example) even though your Scroll Notation is valid.
 
 ? How do I escape characters?
-* In Tree Notation you never need to escape characters. If your node spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your nodeType definition treats child nodes as one block. Some Tree Languages might have the notion of escape characters in certain places, but there's no such thing at the Tree Notation base layer.
+* In Scroll Notation you never need to escape characters. If your node spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your nodeType definition treats child nodes as one block. Some Tree Languages might have the notion of escape characters in certain places, but there's no such thing at the Scroll Notation base layer.
 
-? Does Tree Notation directly map to XML or JSON?
-* No. A subset of Tree Notation does, but for perfect one-to-one matching you'll want to use a Tree Language specifically designed for that language.
+? Does Scroll Notation directly map to XML or JSON?
+* No. A subset of Scroll Notation does, but for perfect one-to-one matching you'll want to use a Tree Language specifically designed for that language.
 
-? Can I use Tree Notation with any programming language?
-* Yes! The <a href="https://github.com/treenotation/jtree">JTree library</a> provides Tree Notation support for TypeScript and Javascript, but someday there may be Tree Notation and Tree Grammar libraries in all programming languages, similar to how most languages nowadays have JSON libraries.
+? Can I use Scroll Notation with any programming language?
+* Yes! The <a href="https://github.com/breck7/jtree">JTree library</a> provides Scroll Notation support for TypeScript and Javascript, but someday there may be Scroll Notation and Tree Grammar libraries in all programming languages, similar to how most languages nowadays have JSON libraries.
 
-* If you want to build a Tree Notation library for your language, there is a <a href="https://github.com/treenotation/swim">meta project intended to help</a>!
+* If you want to build a Scroll Notation library for your language, there is a <a href="https://github.com/breck7/swim">meta project intended to help</a>!
 
 # Project Status
 
-? Who makes Tree Notation, and is it open source?
-* Tree Notation is free and open source. The Tree Notation Lab is a distributed research group started in Hawaii that works on the core Tree Notation infrastructure projects. The plan is to build the infrastructure needed to test whether Tree Notation is a good idea. If it is, get a broader Tree Notation ecosystem growing.
+? Who makes Scroll Notation, and is it open source?
+* Scroll Notation is free and open source. The Scroll Notation Lab is a distributed research group started in Hawaii that works on the core Scroll Notation infrastructure projects. The plan is to build the infrastructure needed to test whether Scroll Notation is a good idea. If it is, get a broader Scroll Notation ecosystem growing.
 
-? Is Tree Notation ready for production use?
-* Sort of! Tree Notation is ready for early adopters. If you use Tree Notation today, you probably will want to stay up to date with what's happening as the tooling is still rapidly evolving.
+? Is Scroll Notation ready for production use?
+* Sort of! Scroll Notation is ready for early adopters. If you use Scroll Notation today, you probably will want to stay up to date with what's happening as the tooling is still rapidly evolving.
 
 * If you'd prefer to wait until most of the details are settled, late 2023 is probably a better time to start using it.
 
@@ -196,11 +196,11 @@ code
 
 # Editing Tips
 
-? How can I copy and paste code in Tree Notation and have the editor ensure correct indentation?
+? How can I copy and paste code in Scroll Notation and have the editor ensure correct indentation?
 * Look for a "Paste and indent" command. For example, in Sublime Text you can click Edit->Paste and Indent, or press Cmd+Shift+v.
 
 ? Do I have to count the spaces?
-* No. We strongly recommend using an editor that supports Tree Notation with syntax highlighting, indentation help and more (if we don't have support for your favorite editor yet, please help us add it!). If you are finding it difficult to use Tree Notation, that's just because the editor support is in the early stages. Please let us know what problems you are having so we can get them fixed.
+* No. We strongly recommend using an editor that supports Scroll Notation with syntax highlighting, indentation help and more (if we don't have support for your favorite editor yet, please help us add it!). If you are finding it difficult to use Scroll Notation, that's just because the editor support is in the early stages. Please let us know what problems you are having so we can get them fixed.
 
 # For Advanced Tree Language Creators
 
@@ -211,44 +211,44 @@ code
 * Yes! As of JTree 35, the Grammar Language that ships with Jtree now supports other notations. Originally only prefix notation was supported without writing a decent amount of target code.
 
 ? Can I do inline Trees?
-* Yes! While not supported at the base Tree Notation level, your individual nodes can certainly have inline trees. Often your Tree Languages will have nodes that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Tree Notation, except using something like the pipe character as nodeBreakSymbol instead of the newline character.
+* Yes! While not supported at the base Scroll Notation level, your individual nodes can certainly have inline trees. Often your Tree Languages will have nodes that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Scroll Notation, except using something like the pipe character as nodeBreakSymbol instead of the newline character.
 
 # Lisp Related Questions
 
 ? How is this different from S-Expressions?
-* It is largely accurate to say Tree Notation is S-Expressions without parenthesis. But this makes them very different! Tree Notation gives you fewer chances to make errors, easier program concatenation and ad hoc parser writing, easier program synthesis, easier visual programming, easier code analysis, and more.
+* It is largely accurate to say Scroll Notation is S-Expressions without parenthesis. But this makes them very different! Scroll Notation gives you fewer chances to make errors, easier program concatenation and ad hoc parser writing, easier program synthesis, easier visual programming, easier code analysis, and more.
 
-? Is Tree Notation just Lisp?
-* No. It is largely accurate to say Tree Notation is S-Expressions without parenthesis. However, Tree Notation has a useful geometric isomorphism that S-Expressions/Lisp lack, that might have significant network effects.
+? Is Scroll Notation just Lisp?
+* No. It is largely accurate to say Scroll Notation is S-Expressions without parenthesis. However, Scroll Notation has a useful geometric isomorphism that S-Expressions/Lisp lack, that might have significant network effects.
 
-? What's an example of "ad hoc" parsing that you can do with Tree Notation that you cannot do with S-Expressions?
+? What's an example of "ad hoc" parsing that you can do with Scroll Notation that you cannot do with S-Expressions?
 * If you have a Tree Language with a root nodeType named `folder`, and you want to rename the keyword of that nodeType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
 
-? What's something else you can do with Tree Notation that you can't do with Lisp?
-* Easy program concatenation. For example, in Tree Notation you can create valid new programs simply by appending strings, whereas in Lisp you might first have to do some parentheses removing and inserting.
+? What's something else you can do with Scroll Notation that you can't do with Lisp?
+* Easy program concatenation. For example, in Scroll Notation you can create valid new programs simply by appending strings, whereas in Lisp you might first have to do some parentheses removing and inserting.
 
 ? What's something else that is worse in Lisp?
-* In Lisp you have to escape certain characters. In Tree Notation, you never need to escape characters. (Note: although you are 100% free to design Tree Languages that implement escape characters, that is almost never necessary).
+* In Lisp you have to escape certain characters. In Scroll Notation, you never need to escape characters. (Note: although you are 100% free to design Tree Languages that implement escape characters, that is almost never necessary).
 
 # History
 
-? Are there any papers written about Tree Notation?
-* You can read the half-baked papers about Tree Notation.
- https://github.com/treenotation/research/tree/master/papers papers
+? Are there any papers written about Scroll Notation?
+* You can read the half-baked papers about Scroll Notation.
+ https://github.com/breck7/research/tree/master/papers papers
 
-* The basic gist of the theory is that all structures are trees, Tree Notation is all you need to represent trees, and by building things up from Tree Notation we might be able to make things simpler _AND better_.
+* The basic gist of the theory is that all structures are trees, Scroll Notation is all you need to represent trees, and by building things up from Scroll Notation we might be able to make things simpler _AND better_.
 
-? Which language influenced Tree Notation the most?
+? Which language influenced Scroll Notation the most?
 * Syntactically there's no question--it was <a href="http://haml.info/">HAML</a>. See the origin story below if you are curious why. Semantically there's been a lot of influences from thousands of languages. Particularly influential ones are Lisp, Haskell, Racket, ANTLR, TypeScript, C#, Python, Scheme, Javascript, COBOL, Rebol, Mathematica, APL, R, Red-Lang, Fortran, Forth, C++, JSON, XML, HTML, CSS, SQL, somewhat, but not necessarily, in that order.
 
-? Who is the first person to discover Tree Notation?
-* Breck Yunits et al. came up with Tree Notation circa 2012. However, it turns out in 2003 Egil Möller <a href="https://srfi.schemers.org/srfi-49/srfi-49.html">proposed</a> "I-Expressions", or "Indentation-sensitive syntax", an alternative to S-Expressions in Scheme that is 80% similar to Tree Notation. A few implementation details weren't ideal, but the core is largely the same.
+? Who is the first person to discover Scroll Notation?
+* Breck Yunits et al. came up with Scroll Notation circa 2012. However, it turns out in 2003 Egil Möller <a href="https://srfi.schemers.org/srfi-49/srfi-49.html">proposed</a> "I-Expressions", or "Indentation-sensitive syntax", an alternative to S-Expressions in Scheme that is 80% similar to Scroll Notation. A few implementation details weren't ideal, but the core is largely the same.
 
 ? Why didn't I-Expressions catch on?
-* Not sure. Perhaps because it was pitched as a different way to write Lisp, and that was it. With Tree Notation, coming up with an improved way to write Lisp was never a primary goal. Our primary goals have been to enable visual programming, simpler APIs, cleaner code and program synthesis, for which Tree Notation is an ideal tool.
+* Not sure. Perhaps because it was pitched as a different way to write Lisp, and that was it. With Scroll Notation, coming up with an improved way to write Lisp was never a primary goal. Our primary goals have been to enable visual programming, simpler APIs, cleaner code and program synthesis, for which Scroll Notation is an ideal tool.
 
-? How was Tree Notation discovered?
-* If Tree Notation turns out to be a good idea, below is the origin story.
+? How was Scroll Notation discovered?
+* If Scroll Notation turns out to be a good idea, below is the origin story.
 
 quote
  The year was 2012. Barack Hussein Obama was president, Prettier hadn't been released yet, and humans talked to other humans more than Alexa.
@@ -267,7 +267,7 @@ quote
  
  5 years later I had another "aha" moment when I realized it would also be a good base notation for _any_ type of computer language, and wrote a paper about it. Which went on to be cited over (editor's note: it says "zero" here, is that correct?) times.
 
- It was over 7 years before the first "aha" moment that Tree Notation started to maybe get useful.
+ It was over 7 years before the first "aha" moment that Scroll Notation started to maybe get useful.
 
 # Other
 
@@ -277,7 +277,7 @@ quote
 ? How confident are you that this is a good idea?
 * If you round up, 10%. But in the 90% chance that this is not a good idea, attempting to prove that it is a good or a bad idea seems to be a promising line of research.
 
-? What is the Zen of Tree Notation?
+? What is the Zen of Scroll Notation?
 * Rule #1. Put it in a Tree Language.
 * End of Rules.
 
