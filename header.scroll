@@ -1,9 +1,9 @@
 importOnly
-description Frequently Asked Questions about Tree Notation
-git https://github.com/treenotation/faq.treenotation.org
-viewSourceUrl https://github.com/treenotation/faq.treenotation.org/blob/main
-email faq@treenotation.org
-baseUrl https://faq.treenotation.org/
+description Frequently Asked Questions about Scroll Notation
+git https://github.com/breck7/faq.scroll.pub
+viewSourceUrl https://github.com/breck7/faq.scroll.pub/blob/main
+email breck7@gmail.com
+baseUrl https://faq.scroll.pub/
 metaTags
 scrollCssTag
 scrollHeader
