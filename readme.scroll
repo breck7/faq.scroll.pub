@@ -1,5 +1,6 @@
 import header.scroll
 title Scroll Notation Frequently Asked Questions
+printTitle
 permalink index.html
 startColumns 4
 
@@ -14,7 +15,9 @@ startColumns 4
 Scroll Notation was originally called Tree Notation.
 
 ? What is Scroll Notation?
-* Scroll Notation is a basic building block that you can build higher level Tree Languages on top of. For programmers, this might give you an idea of the structure behind Scroll Notation:
+Scroll Notation is a simple syntax that Scroll is built on top of.
+
+For programmers, this might give you an idea of the structure behind Scroll Notation:
 
 code
  nodeBreakSymbol = "\n" // New lines separate nodes
@@ -24,18 +27,18 @@ code
   line: string
  }
 
-* Code or information represented in a Tree Language therefore always has a similar appearance - it is indented to show structure, rather than (necessarily) using the symbols you might see in traditional programming languages such as C++ and Java - and languages intended for data storage and communication, such as XML and JSON.
+* Code or information represented in a Scroll Dialect therefore always has a similar appearance - it is indented to show structure, rather than (necessarily) using the symbols you might see in traditional programming languages such as C++ and Java - and languages intended for data storage and communication, such as XML and JSON.
 
 * This simple, yet powerful, base structure may looks a little like Python, Visual Basic, YAML - or 'Domain Specific Languages' written 'on top' of existing programming languages. This isn’t by accident: such languages were designed to look similar to natural language, using words over symbols and indentation to denote structure.
 
-* Here’s an example of a minimal HTML document represented in a Tree Language:
+* Here’s an example of a minimal HTML document represented in a Scroll Dialect:
 
 code
  html
   body
    div おはようございます
 
-* One important feature of Scroll Notation is that due to its simplicity and consistency, Tree Languages are easy to write - and code or information represented in a Tree Language is easy to syntax check (and highlight) - and autocomplete.
+* One important feature of Scroll Notation is that due to its simplicity and consistency, Scroll Dialects are easy to write - and code or information represented in a Scroll Dialect is easy to syntax check (and highlight) - and autocomplete.
 
 * (Thank you to @vakradrz for this answer)
 
@@ -46,12 +49,12 @@ quote
  1 Binary => 1,000+ Syntaxes => 10,000+ languages
 * In the future we think the stack may look like this:
 quote
- 1 Binary => 1 Scroll Notation => 10,000+ Tree Languages
+ 1 Binary => 1 Scroll Notation => 10,000+ Scroll Languages
 
-* We all use software tools to build software. Scroll Notation makes building these tools easier, and as more people join the Scroll Notation ecosystem there may be significant network effects. If Jane is building a Tree Language and tools for automating train schedules, and John is building a Tree Language and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
+* We all use software tools to build software. Scroll Notation makes building these tools easier, and as more people join the Scroll Notation ecosystem there may be significant network effects. If Jane is building a Scroll Dialect and tools for automating train schedules, and John is building a Scroll Dialect and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
 
-? What's the difference between Scroll Notation and Tree Languages?
-* Scroll Notation is a base level notation. Generally users use Tree Languages, which make Scroll Notation useful. The Tree Language Grammar is a tool to make it easier to build Tree Languages.
+? What's the difference between Scroll Notation and Scroll Dialects?
+* Scroll Notation is a base level notation. Generally users use Scroll Dialects, which make Scroll Notation useful. The Scroll Dialect Grammar is a tool to make it easier to build Scroll Dialects.
  https://sdk.scroll.pub/designer/#standard%20grammar Grammar
 
 ? What is special about Scroll Notation?
@@ -89,11 +92,11 @@ code
 
 * It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.npm` grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.
 
-* Note: the JSON example above works correctly, but JSON and Scroll Notation are not equivalent by default, since JSON does not support certain structures and Scroll Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Tree Language such as Dug that has a 1-to-1 relationship to JSON.
+* Note: the JSON example above works correctly, but JSON and Scroll Notation are not equivalent by default, since JSON does not support certain structures and Scroll Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Scroll Dialect such as Dug that has a 1-to-1 relationship to JSON.
  https://sdk.scroll.pub/designer/#standard%20dug Dug
 
 ? What is a basic example of Scroll Notation for programming languages?
-* In the example below, Scroll Notation is used as a base for a math Tree Language where traditionally S-Expressions/Lisp might be used.
+* In the example below, Scroll Notation is used as a base for a math Scroll Dialect where traditionally S-Expressions/Lisp might be used.
 * make8.math:
 code
  multiply
@@ -105,27 +108,27 @@ code
 * The second example contains 13 parts, whereas the first only has 7. There are also infinite ways to represent the second example, since the compiler ignores insignificant whitespace, whereas in the first there is only 1 way to represent that particular structure.
 
 ? What are some advanced examples of Scroll Notation in action?
-* Check out the Ohayo project or the Tree Language Designer.
+* Check out the Ohayo project or the Scroll Dialect Designer.
  https://github.com/breck7/ohayo Ohayo
- https://sdk.scroll.pub/designer/ Tree Language Designer
+ https://sdk.scroll.pub/designer/ Scroll Dialect Designer
 
-? How can I build a new Tree Language?
-* A good place to start is with our simple $Tree Language Builder$.
+? How can I build a new Scroll Dialect?
+* A good place to start is with our simple $Scroll Dialect Builder$.
  wrap $ http://sdk.scroll.pub/designer/
 
 ? Where can I use Scroll Notation?
 * Everywhere! Anywhere you use programming languages or encodings, you can use Scroll Notation. Hopefully a Scroll Notation Ecosystem will grow, if Scroll Notation turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
 
-? What are some examples of Tree Languages?
+? What are some examples of Scroll Dialects?
 * There are over a dozen <a href="https://github.com/breck7/jtree/tree/master/langs">example languages</a> in the JTree GitHub repo. Here's a language that compiles to <a href="https://sdk.scroll.pub/designer/#standard%20stump">HTML</a>, a <a href="https://sdk.scroll.pub/designer/#standard%20project">language similar to Make</a>, and a <a href="https://sdk.scroll.pub/designer/#standard%20numbers">language that does simple math </a>.
 
-? Languages that add numbers or compile to HTML are cute, but are there any advanced Tree Language?
-* Currently the most advanced somewhat-useful Tree Language is OhayoLang, the dataflow language in the data science studio <a href="https://ohayo.computer/">Ohayo</a>. In 2023, OhayoLang could be a competitive rival to Python or R for 80% of data science tasks. Another very powerful language is <a href="https://sdk.scroll.pub/designer/#standard%20grammar">Grammar</a>, which is similar to ANTLR or Racket in that it's a language for building languages. However, in 2023 the most powerful Tree Language could be yours!
+? Languages that add numbers or compile to HTML are cute, but are there any advanced Scroll Dialect?
+* Currently the most advanced somewhat-useful Scroll Dialect is OhayoLang, the dataflow language in the data science studio <a href="https://ohayo.computer/">Ohayo</a>. In 2023, OhayoLang could be a competitive rival to Python or R for 80% of data science tasks. Another very powerful language is <a href="https://sdk.scroll.pub/designer/#standard%20grammar">Grammar</a>, which is similar to ANTLR or Racket in that it's a language for building languages. However, in 2023 the most powerful Scroll Dialect could be yours!
 
 # Structure
 
-? What is the difference between Scroll Notation and Tree Languages?
-* There is an important distinction between _Scroll Notation_ and _Tree Languages_. Scroll Notation is a simple dumb format for encoding Tree Data structures. Tree Languages give you higher level semantics. There is not a single general purpose "Tree Language", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Tree Languages" with any semantics desired by the language designer(s).
+? What is the difference between Scroll Notation and Scroll Dialects?
+* There is an important distinction between _Scroll Notation_ and _Scroll Dialects_. Scroll Notation is a simple dumb format for encoding Tree Data structures. Scroll Dialects give you higher level semantics. There is not a single general purpose "Scroll Dialect", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Scroll Dialects" with any semantics desired by the language designer(s).
 
 ? What are the data structures in Scroll Notation?
 * This is the base Scroll Notation:
@@ -138,9 +141,9 @@ code
    line: string
  }
 
-* The Tree is _the_ data structure in Scroll Notation. Types like booleans, ints and vectors only exist at the higher level Tree Language level. The theory behind Scroll Notation is that concepts like booleans, ints and vectors are just kinds of Trees.
+* The Tree is _the_ data structure in Scroll Notation. Types like booleans, ints and vectors only exist at the higher level Scroll Dialect level. The theory behind Scroll Notation is that concepts like booleans, ints and vectors are just kinds of Trees.
 
-* Higher level Tree Languages are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
+* Higher level Scroll Dialects are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
 
 ? What are the basic terms when talking about things written in Scroll Notation?
 * Example:
@@ -172,13 +175,13 @@ code
 
 * In fact, there is no such thing as an invalid Scroll Notation document at the base level, just as there is no such thing as an "invalid binary sequence".
 
-* Usually when using Scroll Notation you use a higher level grammar, called a Tree Language, and so you can still have invalid programs in that language (because of typos, for example) even though your Scroll Notation is valid.
+* Usually when using Scroll Notation you use a higher level grammar, called a Scroll Dialect, and so you can still have invalid programs in that language (because of typos, for example) even though your Scroll Notation is valid.
 
 ? How do I escape characters?
-* In Scroll Notation you never need to escape characters. If your node spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your nodeType definition treats child nodes as one block. Some Tree Languages might have the notion of escape characters in certain places, but there's no such thing at the Scroll Notation base layer.
+* In Scroll Notation you never need to escape characters. If your node spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your nodeType definition treats child nodes as one block. Some Scroll Dialects might have the notion of escape characters in certain places, but there's no such thing at the Scroll Notation base layer.
 
 ? Does Scroll Notation directly map to XML or JSON?
-* No. A subset of Scroll Notation does, but for perfect one-to-one matching you'll want to use a Tree Language specifically designed for that language.
+* No. A subset of Scroll Notation does, but for perfect one-to-one matching you'll want to use a Scroll Dialect specifically designed for that language.
 
 ? Can I use Scroll Notation with any programming language?
 * Yes! The <a href="https://github.com/breck7/jtree">JTree library</a> provides Scroll Notation support for TypeScript and Javascript, but someday there may be Scroll Notation and Tree Grammar libraries in all programming languages, similar to how most languages nowadays have JSON libraries.
@@ -206,16 +209,16 @@ code
 ? Do I have to count the spaces?
 * No. We strongly recommend using an editor that supports Scroll Notation with syntax highlighting, indentation help and more (if we don't have support for your favorite editor yet, please help us add it!). If you are finding it difficult to use Scroll Notation, that's just because the editor support is in the early stages. Please let us know what problems you are having so we can get them fixed.
 
-# For Advanced Tree Language Creators
+# For Advanced Scroll Dialect Creators
 
-? What are the benefits to writing a "Grammar" file to create my Tree Language?
+? What are the benefits to writing a "Grammar" file to create my Scroll Dialect?
 * By creating 1 file in Grammar, you get a new programming language with autocomplete, syntax highlighting, type-checking, help, integration tests, compiling, and more. The goal of Grammar is to help you create a new, robust, well tested language as easily as possible.
 
 ? Can I use infix notation, postfix notation, or pattern matching?
 * Yes! As of JTree 35, the Grammar Language that ships with Jtree now supports other notations. Originally only prefix notation was supported without writing a decent amount of target code.
 
 ? Can I do inline Trees?
-* Yes! While not supported at the base Scroll Notation level, your individual nodes can certainly have inline trees. Often your Tree Languages will have nodes that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Scroll Notation, except using something like the pipe character as nodeBreakSymbol instead of the newline character.
+* Yes! While not supported at the base Scroll Notation level, your individual nodes can certainly have inline trees. Often your Scroll Dialects will have nodes that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Scroll Notation, except using something like the pipe character as nodeBreakSymbol instead of the newline character.
 
 # Lisp Related Questions
 
@@ -226,13 +229,13 @@ code
 * No. It is largely accurate to say Scroll Notation is S-Expressions without parenthesis. However, Scroll Notation has a useful geometric isomorphism that S-Expressions/Lisp lack, that might have significant network effects.
 
 ? What's an example of "ad hoc" parsing that you can do with Scroll Notation that you cannot do with S-Expressions?
-* If you have a Tree Language with a root nodeType named `folder`, and you want to rename the keyword of that nodeType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
+* If you have a Scroll Dialect with a root nodeType named `folder`, and you want to rename the keyword of that nodeType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
 
 ? What's something else you can do with Scroll Notation that you can't do with Lisp?
 * Easy program concatenation. For example, in Scroll Notation you can create valid new programs simply by appending strings, whereas in Lisp you might first have to do some parentheses removing and inserting.
 
 ? What's something else that is worse in Lisp?
-* In Lisp you have to escape certain characters. In Scroll Notation, you never need to escape characters. (Note: although you are 100% free to design Tree Languages that implement escape characters, that is almost never necessary).
+* In Lisp you have to escape certain characters. In Scroll Notation, you never need to escape characters. (Note: although you are 100% free to design Scroll Dialects that implement escape characters, that is almost never necessary).
 
 # History
 
@@ -282,7 +285,7 @@ quote
 * If you round up, 10%. But in the 90% chance that this is not a good idea, attempting to prove that it is a good or a bad idea seems to be a promising line of research.
 
 ? What is the Zen of Scroll Notation?
-* Rule #1. Put it in a Tree Language.
+* Rule #1. Put it in a Scroll Dialect.
 * End of Rules.
 
 import footer.scroll
