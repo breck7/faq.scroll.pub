@@ -7,3 +7,5 @@ baseUrl https://faq.scroll.pub/
 metaTags
 gazetteCss
 pageHeader
+buildTxt
+buildHtml
