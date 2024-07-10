@@ -1,0 +1,90 @@
+import header.scroll
+title Scroll Notation Spec
+startColumns 4
+
+# Introduction to Two Dimensional Languages
+
+* Scroll Notation is a subset of a class of languages called two dimensional languages.
+
+* One dimensional languages assume a one dimensional array of bits with a single read head
+ moving in order.
+
+* Two dimensional languages break those assumptions. There may be multiple read heads that
+ can move not just on the x axis but on the y axis as well.
+
+* Scroll Notation is a middle ground that utilitizes ideas from the two dimensional language
+ world using present day technology.
+
+# Scroll Notation Spec
+
+## The Data Structure
+* The basic structure of a Scroll Notation object is as follows:
+code
+ interface TreeNode {
+   parent: &TreeNode
+   words: string[]
+   children: TreeNode[]
+ }
+
+## No Syntax Errors
+* All documents are valid Scroll Notation documents. Like binary notation, there are no syntax errors in Scroll Notation. For every possible string _abc_:
+code
+ new TreeNode(abc).toString() === abc
+
+* Errors can only occur at a higher semantic level in _Tree Languages_.
+
+## Isomorphism to Spreadsheets
+* A program in Scroll Notation is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
+
+## Special Symbols
+* A Scroll Notation object is a sequence of bits/bytes/characters(hereafter abbreviated as chars). Scroll Notation requires the definition of 3 special chars, which turn an otherwise unstructured linear sequence of chars into a structured recursive tree object.
+
+* Those 3 special chars are:
+- nodeBreakSymbol
+- wordBreakSymbol
+- edgeSymbol
+
+* *nodeBreakSymbol* delimits nodes (lines), *wordBreakSymbol* delimits words (cells), and *edgeSymbol* is used to indicate the parent/child relationship between nodes.
+
+* With just nodeBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
+
+* By convention those special symbols are:
+
+code
+ nodeBreakSymbol
+ newline character
+ Keyboard: Enter Key
+ Binary: 00001010
+ Hex: 0A
+ Decimal: 10
+ As string: "\n"
+ (Note: On Windows, "\r" is treated the same as any other non-special char)
+
+code
+ wordBreakSymbol
+ space character
+ Keyboard: Space Key
+ Binary: 00100000
+ Hex: 20
+ Decimal: 32
+ As string: " "
+
+code
+ edgeSymbol
+ # by convention is the same as wordBreakSymbol above
+
+* For better interoperability with existing spreadsheet applications the tab character `\t` is often used for wordBreakSymbol and edgeSymbol.
+
+* Although in theory edgeSymbol and wordBreakSymbol can conflict, in practice, given a higher level Tree Language grammar, that does not happen.
+
+* This is currently the full spec of Scroll Notation.
+
+# Tree Languages
+* The structure above defines Scroll Notation. Scroll Notation is a very basic notation. On top of Scroll Notation, people build _Tree Languages_. You can see examples of higher level Tree Languages in the Tree Language Designer.
+ https://sdk.scroll.pub/designer/ Tree Language Designer
+
+* The Grammar Language is an advanced Tree Language for building other Tree Languages. This spec is written in a Tree Language called Scroll.
+ https://sdk.scroll.pub/designer/#standard%20grammar Grammar Language
+ https://github.com/publicdomaincompany/scroll/blob/master/scrolldown.grammar Scroll
+
+import footer.scroll
