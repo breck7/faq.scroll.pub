@@ -1,57 +1,54 @@
 import header.scroll
-title Scroll Notation Spec
-startColumns 4
+title Particle Notation Spec
+thinColumns 4
 
 # Introduction to Two Dimensional Languages
 
-* Scroll Notation is a subset of a class of languages called two dimensional languages.
+Particle Notation is a subset of a class of languages called two dimensional languages.
 
-* One dimensional languages assume a one dimensional array of bits with a single read head
- moving in order.
+One dimensional languages assume a one dimensional array of bits with a single read head moving in order.
 
-* Two dimensional languages break those assumptions. There may be multiple read heads that
- can move not just on the x axis but on the y axis as well.
+Two dimensional languages break those assumptions. There may be multiple read heads that can move not just on the x axis but on the y axis as well.
 
-* Scroll Notation is a middle ground that utilitizes ideas from the two dimensional language
- world using present day technology.
+Particle Notation is a middle ground that utilitizes ideas from the two dimensional language world using present day technology.
 
-# Scroll Notation Spec
+# Particle Notation Spec
 
 ## The Data Structure
-* The basic structure of a Scroll Notation object is as follows:
+The basic structure of a Particle Notation object is as follows:
 code
- interface TreeNode {
-   parent: &TreeNode
+ interface Particle {
+   parent: &Particle
    words: string[]
-   children: TreeNode[]
+   children: Particle[]
  }
 
 ## No Syntax Errors
-* All documents are valid Scroll Notation documents. Like binary notation, there are no syntax errors in Scroll Notation. For every possible string _abc_:
+All documents are valid Particle Notation documents. Like binary notation, there are no syntax errors in Particle Notation. For every possible string _abc_:
 code
- new TreeNode(abc).toString() === abc
+ new Particle(abc).toString() === abc
 
-* Errors can only occur at a higher semantic level in _Tree Languages_.
+Errors can only occur at a higher semantic level in _Parsers_.
 
 ## Isomorphism to Spreadsheets
-* A program in Scroll Notation is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
+A program in Particle Notation is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
 
 ## Special Symbols
-* A Scroll Notation object is a sequence of bits/bytes/characters(hereafter abbreviated as chars). Scroll Notation requires the definition of 3 special chars, which turn an otherwise unstructured linear sequence of chars into a structured recursive tree object.
+A Particle Notation object is a sequence of bits/bytes/characters(hereafter abbreviated as chars). Particle Notation requires the definition of 3 special chars, which turn an otherwise unstructured linear sequence of chars into a structured recursive tree object.
 
 * Those 3 special chars are:
-- nodeBreakSymbol
+- particleBreakSymbol
 - wordBreakSymbol
 - edgeSymbol
 
-* *nodeBreakSymbol* delimits nodes (lines), *wordBreakSymbol* delimits words (cells), and *edgeSymbol* is used to indicate the parent/child relationship between nodes.
+*particleBreakSymbol* delimits nodes (lines), *wordBreakSymbol* delimits words (cells), and *edgeSymbol* is used to indicate the parent/child relationship between nodes.
 
-* With just nodeBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
+With just particleBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
 
-* By convention those special symbols are:
+By convention those special symbols are:
 
 code
- nodeBreakSymbol
+ particleBreakSymbol
  newline character
  Keyboard: Enter Key
  Binary: 00001010
@@ -73,18 +70,18 @@ code
  edgeSymbol
  # by convention is the same as wordBreakSymbol above
 
-* For better interoperability with existing spreadsheet applications the tab character `\t` is often used for wordBreakSymbol and edgeSymbol.
+For better interoperability with existing spreadsheet applications the tab character `\t` can be used for wordBreakSymbol and edgeSymbol.
 
-* Although in theory edgeSymbol and wordBreakSymbol can conflict, in practice, given a higher level Tree Language grammar, that does not happen.
+Although in theory edgeSymbol and wordBreakSymbol can conflict, in practice, given higher level Parsers, that does not happen.
 
-* This is currently the full spec of Scroll Notation.
+* This is currently the full spec of Particle Notation.
 
-# Tree Languages
-* The structure above defines Scroll Notation. Scroll Notation is a very basic notation. On top of Scroll Notation, people build _Tree Languages_. You can see examples of higher level Tree Languages in the Tree Language Designer.
- https://sdk.scroll.pub/designer/ Tree Language Designer
+# Parsers
+The structure above defines Particle Notation. Particle Notation is a very basic notation. On top of Particle Notation, people use _Parsers_. You can see examples of higher level Parsers in the Parsers Designer.
+ https://sdk.scroll.pub/designer/ Parsers Designer
 
-* The Grammar Language is an advanced Tree Language for building other Tree Languages. This spec is written in a Tree Language called Scroll.
- https://sdk.scroll.pub/designer/#standard%20grammar Grammar Language
- https://github.com/publicdomaincompany/scroll/blob/master/scrolldown.grammar Scroll
+Parsers is an advanced language for building other languages. This spec is written in a language built on Parsers called Scroll.
+ https://sdk.scroll.pub/designer Parsers
+ https://scroll.pub Scroll
 
 import footer.scroll

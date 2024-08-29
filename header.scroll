@@ -1,11 +1,11 @@
 importOnly
-description Frequently Asked Questions about Scroll Notation
-git https://github.com/breck7/faq.scroll.pub
+description Frequently Asked Questions about Particle Notation
 viewSourceUrl https://github.com/breck7/faq.scroll.pub/blob/main
-email breck7@gmail.com
 baseUrl https://faq.scroll.pub/
 metaTags
 gazetteCss
-pageHeader
+homeButton
+leftRightButtons
+viewSourceButton
 buildTxt
 buildHtml
