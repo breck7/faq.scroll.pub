@@ -1,20 +1,20 @@
 Introduction to Two Dimensional Languages
 =========================================
 
-Particle Notation is a subset of a class of languages called two dimensional languages.
+Particles is a subset of a class of languages called two dimensional languages.
 
 One dimensional languages assume a one dimensional array of bits with a single read head moving in order.
 
 Two dimensional languages break those assumptions. There may be multiple read heads that can move not just on the x axis but on the y axis as well.
 
-Particle Notation is a middle ground that utilitizes ideas from the two dimensional language world using present day technology.
+Particles is a middle ground that utilitizes ideas from the two dimensional language world using present day technology.
 
-Particle Notation Spec
-======================
+Particles Spec
+==============
 
 The Data Structure
 ==================
-The basic structure of a Particle Notation object is as follows:
+The basic structure of a Particles object is as follows:
 interface Particle {
   parent: &Particle
   words: string[]
@@ -23,18 +23,18 @@ interface Particle {
 
 No Syntax Errors
 ================
-All documents are valid Particle Notation documents. Like binary notation, there are no syntax errors in Particle Notation. For every possible string _abc_:
+All documents are valid Particles documents. Like binary notation, there are no syntax errors in Particles. For every possible string _abc_:
 new Particle(abc).toString() === abc
 
 Errors can only occur at a higher semantic level in _Parsers_.
 
 Isomorphism to Spreadsheets
 ===========================
-A program in Particle Notation is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
+A program in Particles is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
 
 Special Symbols
 ===============
-A Particle Notation object is a sequence of bits/bytes/characters(hereafter abbreviated as chars). Particle Notation requires the definition of 3 special chars, which turn an otherwise unstructured linear sequence of chars into a structured recursive tree object.
+A Particles object is a sequence of bits/bytes/characters(hereafter abbreviated as chars). Particles requires the definition of 3 special chars, which turn an otherwise unstructured linear sequence of chars into a structured recursive tree object.
 
 Those 3 special chars are:
 - particleBreakSymbol
@@ -71,15 +71,15 @@ For better interoperability with existing spreadsheet applications the tab chara
 
 Although in theory edgeSymbol and wordBreakSymbol can conflict, in practice, given higher level Parsers, that does not happen.
 
-This is currently the full spec of Particle Notation.
+This is currently the full spec of Particles.
 
 Parsers
 =======
-The structure above defines Particle Notation. Particle Notation is a very basic notation. On top of Particle Notation, people use _Parsers_. You can see examples of higher level Parsers in the Parsers Designer.
+The structure above defines Particles. Particles is a very basic notation. On top of Particles, people use _Parsers_. You can see examples of higher level Parsers in the Parsers Designer.
  https://sdk.scroll.pub/designer/ Parsers Designer
 
 Parsers is an advanced language for building other languages. This spec is written in a language built on Parsers called Scroll.
  https://sdk.scroll.pub/designer Parsers
  https://scroll.pub Scroll
 
-Built with Scroll v125.0.1
+Built with Scroll v125.6.0

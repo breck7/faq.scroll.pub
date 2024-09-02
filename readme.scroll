@@ -1,23 +1,23 @@
 import header.scroll
-title Particle Notation Frequently Asked Questions
+title Particles Frequently Asked Questions
 printTitle
 permalink index.html
 thinColumns 4
 
-* Below is a list of questions that are commonly asked by people who are new to Particle Notation. If you have a question not listed here please ask us on Twitter or by posting a message to the World Wide Scroll Subreddit.
- https://notation.scroll.pub/ Particle Notation
+* Below is a list of questions that are commonly asked by people who are new to Particles. If you have a question not listed here please ask us on Twitter or by posting a message to the World Wide Scroll Subreddit.
+ https://particles.scroll.pub/ Particles
  https://x.com/breckyunits Twitter
  https://www.reddit.com/r/WorldWideScroll/ World Wide Scroll Subreddit
 
 # Overview
 
 ? What was the old name?
-Particle Notation was originally called Scroll Notation and before that Tree Notation.
+Particles was originally called Scroll Notation and before that Tree Notation.
 
-? What is Particle Notation?
-Particle Notation is a simple syntax that Scroll is built on top of.
+? What is Particles?
+Particles is a simple syntax that Scroll is built on top of.
 
-For programmers, this might give you an idea of the structure behind Particle Notation:
+For programmers, this might give you an idea of the structure behind Particles:
 
 code
  particleBreakSymbol = "\n" // New lines separate particles
@@ -38,38 +38,38 @@ code
   body
    div おはようございます
 
-* One important feature of Particle Notation is that due to its simplicity and consistency, Scroll Dialects are easy to write - and code or information represented in a Scroll Dialect is easy to syntax check (and highlight) - and autocomplete.
+* One important feature of Particles is that due to its simplicity and consistency, Scroll Dialects are easy to write - and code or information represented in a Scroll Dialect is easy to syntax check (and highlight) - and autocomplete.
 
 * (Thank you to @vakradrz for this answer)
 
 ? There are already over 10,000 programming languages and over 1,000 syntax systems like JSON, XML and BNF, why create another one?
-* There is only 1 binary. Particle Notation is more like binary than it is like a programming language. Particle Notation is a basic building block that you can build higher level languages on top of. Particle Notation is an error-free base notation like binary.
+* There is only 1 binary. Particles is more like binary than it is like a programming language. Particles is a basic building block that you can build higher level languages on top of. Particles is an error-free base syntax like binary.
 * This is our current stack of computer languages:
 quote
  1 Binary => 1,000+ Syntaxes => 10,000+ languages
 * In the future we think the stack may look like this:
 quote
- 1 Binary => 1 Particle Notation => 10,000+ Scroll Languages
+ 1 Binary => 1 Particles => 10,000+ Scroll Languages
 
-* We all use software tools to build software. Particle Notation makes building these tools easier, and as more people join the Particle Notation ecosystem there may be significant network effects. If Jane is building a Scroll Dialect and tools for automating train schedules, and John is building a Scroll Dialect and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
+* We all use software tools to build software. Particles makes building these tools easier, and as more people join the Particles ecosystem there may be significant network effects. If Jane is building a Scroll Dialect and tools for automating train schedules, and John is building a Scroll Dialect and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
 
-? What's the difference between Particle Notation and Scroll Dialects?
-* Particle Notation is a base level notation. Generally users use Scroll Dialects, which make Particle Notation useful. The Scroll Dialect Grammar is a tool to make it easier to build Scroll Dialects.
+? What's the difference between Particles and Scroll Dialects?
+* Particles is a base level syntax. Generally users use Scroll Dialects, which make Particles useful. The Scroll Dialect Grammar is a tool to make it easier to build Scroll Dialects.
  https://sdk.scroll.pub/designer/#standard%20grammar Grammar
 
-? What is special about Particle Notation?
-* Particle Notation may seem similar to notations like JSON, XML, YAML or S-expressions. However, Particle Notation is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Particle Notation substantially different and may cause a _significant improvement_ in computing.
+? What is special about Particles?
+* Particles may seem similar to notations like JSON, XML, YAML or S-expressions. However, Particles is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Particles substantially different and may cause a _significant improvement_ in computing.
 
-? What major problems in computer science does help Particle Notation solve?
-- 1. Program synthesis. Particle Notation makes it easier to train AI models to write great code. Deep Learning models are only as good as the data you train it on. Particle Notation code is noiseless, clean data, which we posit will enable a 10x+ improvement over the state-of-the-art of AI programs that write code and/or assist users in writing code.
-- 2. Clean data. In data science a rule of thumb is that 20% of your time will go toward doing data science, and 80% of your time will go toward getting, cleaning, and organizing data. Particle Notation offers a number of techniques that, coupled with network effects, could greatly reduce time wasted on cleaning data.
-- 3. Visual programming. Particle Notation is the first notation where a visual design tool could generate code as minimal as someone could write by hand. Traditional languages have a critical flaw--there are infinite ways to represent any given structure. In Particle Notation there is only 1 way to represent 1 structure. This simplification is one of a few core reasons why Particle Notation could help solve the Visual Programming problem.
+? What major problems in computer science does help Particles solve?
+- 1. Program synthesis. Particles makes it easier to train AI models to write great code. Deep Learning models are only as good as the data you train it on. Particles code is noiseless, clean data, which we posit will enable a 10x+ improvement over the state-of-the-art of AI programs that write code and/or assist users in writing code.
+- 2. Clean data. In data science a rule of thumb is that 20% of your time will go toward doing data science, and 80% of your time will go toward getting, cleaning, and organizing data. Particles offers a number of techniques that, coupled with network effects, could greatly reduce time wasted on cleaning data.
+- 3. Visual programming. Particles is the first syntax where a visual design tool could generate code as minimal as someone could write by hand. Traditional languages have a critical flaw--there are infinite ways to represent any given structure. In Particles there is only 1 way to represent 1 structure. This simplification is one of a few core reasons why Particles could help solve the Visual Programming problem.
 
-* The data science app Ohayo is in part an experiment to test these 3 advantages of Particle Notation.
+* The data science app Ohayo is in part an experiment to test these 3 advantages of Particles.
  https://github.com/breck7/ohayo Ohayo
 
-? What is a basic example of Particle Notation for file formats?
-* Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Particle Notation, and better. Let's take a look.
+? What is a basic example of Particles for file formats?
+* Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Particles, and better. Let's take a look.
 * package.json:
 code
  {
@@ -92,11 +92,11 @@ code
 
 * It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.npm` grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.
 
-* Note: the JSON example above works correctly, but JSON and Particle Notation are not equivalent by default, since JSON does not support certain structures and Particle Notation does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Scroll Dialect such as Dug that has a 1-to-1 relationship to JSON.
+* Note: the JSON example above works correctly, but JSON and Particles are not equivalent by default, since JSON does not support certain structures and Particles does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Scroll Dialect such as Dug that has a 1-to-1 relationship to JSON.
  https://sdk.scroll.pub/designer/#standard%20dug Dug
 
-? What is a basic example of Particle Notation for programming languages?
-* In the example below, Particle Notation is used as a base for a math Scroll Dialect where traditionally S-Expressions/Lisp might be used.
+? What is a basic example of Particles for programming languages?
+* In the example below, Particles is used as a base for a math Scroll Dialect where traditionally S-Expressions/Lisp might be used.
 * make8.math:
 code
  multiply
@@ -107,7 +107,7 @@ code
  (* (+ 1 1) (+ 2 2))
 * The second example contains 13 parts, whereas the first only has 7. There are also infinite ways to represent the second example, since the compiler ignores insignificant whitespace, whereas in the first there is only 1 way to represent that particular structure.
 
-? What are some advanced examples of Particle Notation in action?
+? What are some advanced examples of Particles in action?
 * Check out the Ohayo project or the Scroll Dialect Designer.
  https://github.com/breck7/ohayo Ohayo
  https://sdk.scroll.pub/designer/ Scroll Dialect Designer
@@ -116,8 +116,8 @@ code
 * A good place to start is with our simple $Scroll Dialect Builder$.
  wrap $ http://sdk.scroll.pub/designer/
 
-? Where can I use Particle Notation?
-* Everywhere! Anywhere you use programming languages or encodings, you can use Particle Notation. Hopefully a Particle Notation Ecosystem will grow, if Particle Notation turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
+? Where can I use Particles?
+* Everywhere! Anywhere you use programming languages or encodings, you can use Particles. Hopefully a Particles Ecosystem will grow, if Particles turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
 
 ? What are some examples of Scroll microlangs?
 * There are over a dozen <a href="https://github.com/breck7/jtree/tree/master/langs">example microlangs</a> in the ScrollSDK GitHub repo. Here's a language that compiles to <a href="https://sdk.scroll.pub/designer/#standard%20stump">HTML</a>, a <a href="https://sdk.scroll.pub/designer/#standard%20project">language similar to Make</a>, and a <a href="https://sdk.scroll.pub/designer/#standard%20numbers">language that does simple math </a>.
@@ -127,11 +127,11 @@ code
 
 # Structure
 
-? What is the difference between Particle Notation and Scroll Dialects?
-* There is an important distinction between _Particle Notation_ and _Scroll Dialects_. Particle Notation is a simple dumb format for encoding Tree Data structures. Scroll Dialects give you higher level semantics. There is not a single general purpose "Scroll Dialect", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Scroll Dialects" with any semantics desired by the language designer(s).
+? What is the difference between Particles and Scroll Dialects?
+* There is an important distinction between _Particles_ and _Scroll Dialects_. Particles is a simple dumb format for encoding Tree Data structures. Scroll Dialects give you higher level semantics. There is not a single general purpose "Scroll Dialect", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Scroll Dialects" with any semantics desired by the language designer(s).
 
-? What are the data structures in Particle Notation?
-* This is the base Particle Notation:
+? What are the data structures in Particles?
+* This is the base Particles:
 code
  particleBreakSymbol = "\n" // New lines separate particles
  edgeSymbol = " " // Increasing indent to denote parent/child relationship
@@ -141,17 +141,17 @@ code
    line: string
  }
 
-* The Tree is _the_ data structure in Particle Notation. Types like booleans, ints and vectors only exist at the higher level Scroll Dialect level. The theory behind Particle Notation is that concepts like booleans, ints and vectors are just kinds of Trees.
+* The Tree is _the_ data structure in Particles. Types like booleans, ints and vectors only exist at the higher level Scroll Dialect level. The theory behind Particles is that concepts like booleans, ints and vectors are just kinds of Trees.
 
 * Higher level Scroll Dialects are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
 
-? What are the basic terms when talking about things written in Particle Notation?
+? What are the basic terms when talking about things written in Particles?
 * Example:
 code
  if true
   print Hello world
 
-* In Particle Notation, the units of measure are *words* and *particles*. Each line is equal to one particle. The example program above has 5 words and 2 particles. In this language the particleType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print particle a *child particle* of the line above it, the if particle.
+* In Particles, the units of measure are *words* and *particles*. Each line is equal to one particle. The example program above has 5 words and 2 particles. In this language the particleType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print particle a *child particle* of the line above it, the if particle.
 
 * If you are familiar with Lisp terminology, you can think of words as atoms.
 
@@ -160,41 +160,41 @@ code
 * Here is a longer spec.
  link spec.html spec
 
-? Does Particle Notation use tabs or spaces?
-* Particle Notation uses a single space to indent blocks which indicates parent/child relationship. You can only increase the indent level one level at a time.
+? Does Particles use tabs or spaces?
+* Particles uses a single space to indent blocks which indicates parent/child relationship. You can only increase the indent level one level at a time.
 
-? Does Particle Notation work on Windows?
-* Yes. Particle Notation only uses the `\n` character to separate particles/lines. `\r` is either ignored or treated as a content character. In practice it's easier to drop all `\r` :).
+? Does Particles work on Windows?
+* Yes. Particles only uses the `\n` character to separate particles/lines. `\r` is either ignored or treated as a content character. In practice it's easier to drop all `\r` :).
 
-? Does Particle Notation support Unicode or just ASCII?
-* Particle Notation supports all encodings. This is perfectly valid Particle Notation:
+? Does Particles support Unicode or just ASCII?
+* Particles supports all encodings. This is perfectly valid Particles:
 code
  html
   body
    div おはようございます
 
-* In fact, there is no such thing as an invalid Particle Notation document at the base level, just as there is no such thing as an "invalid binary sequence".
+* In fact, there is no such thing as an invalid Particles document at the base level, just as there is no such thing as an "invalid binary sequence".
 
-* Usually when using Particle Notation you use a higher level grammar, called a Scroll Dialect, and so you can still have invalid programs in that language (because of typos, for example) even though your Particle Notation is valid.
+* Usually when using Particles you use a higher level grammar, called a Scroll Dialect, and so you can still have invalid programs in that language (because of typos, for example) even though your Particles is valid.
 
 ? How do I escape characters?
-* In Particle Notation you never need to escape characters. If your particle spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your particleType definition treats child particles as one block. Some Scroll Dialects might have the notion of escape characters in certain places, but there's no such thing at the Particle Notation base layer.
+* In Particles you never need to escape characters. If your particle spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your particleType definition treats child particles as one block. Some Scroll Dialects might have the notion of escape characters in certain places, but there's no such thing at the Particles base layer.
 
-? Does Particle Notation directly map to XML or JSON?
-* No. A subset of Particle Notation does, but for perfect one-to-one matching you'll want to use a Scroll Dialect specifically designed for that language.
+? Does Particles directly map to XML or JSON?
+* No. A subset of Particles does, but for perfect one-to-one matching you'll want to use a Scroll Dialect specifically designed for that language.
 
-? Can I use Particle Notation with any programming language?
-* Yes! The <a href="https://github.com/breck7/jtree">ScrollSDK</a> provides Particle Notation support for TypeScript and Javascript, but someday there may be Particle Notation and Parser implementations in all programming languages, similar to how most languages nowadays have JSON libraries.
+? Can I use Particles with any programming language?
+* Yes! The <a href="https://github.com/breck7/jtree">ScrollSDK</a> provides Particles support for TypeScript and Javascript, but someday there may be Particles and Parser implementations in all programming languages, similar to how most languages nowadays have JSON libraries.
 
-* If you want to build a Particle Notation library for your language, there is a <a href="https://github.com/breck7/swim">meta project intended to help</a>!
+* If you want to build a Particles library for your language, there is a <a href="https://github.com/breck7/swim">meta project intended to help</a>!
 
 # Project Status
 
-? Who makes Particle Notation, and is it open source?
-* Particle Notation is free and open source. The Particle Notation Lab is a distributed research group started in Hawaii that works on the core Particle Notation infrastructure projects. The plan is to build the infrastructure needed to test whether Particle Notation is a good idea. If it is, get a broader Particle Notation ecosystem growing.
+? Who makes Particles, and is it open source?
+* Particles is free and open source. The Particles Lab is a distributed research group started in Hawaii that works on the core Particles infrastructure projects. The plan is to build the infrastructure needed to test whether Particles is a good idea. If it is, get a broader Particles ecosystem growing.
 
-? Is Particle Notation ready for production use?
-* Sort of! Particle Notation is ready for early adopters. If you use Particle Notation today, you probably will want to stay up to date with what's happening as the tooling is still rapidly evolving.
+? Is Particles ready for production use?
+* Sort of! Particles is ready for early adopters. If you use Particles today, you probably will want to stay up to date with what's happening as the tooling is still rapidly evolving.
 
 * If you'd prefer to wait until most of the details are settled, late 2023 is probably a better time to start using it.
 
@@ -203,11 +203,11 @@ code
 
 # Editing Tips
 
-? How can I copy and paste code in Particle Notation and have the editor ensure correct indentation?
+? How can I copy and paste code in Particles and have the editor ensure correct indentation?
 * Look for a "Paste and indent" command. For example, in Sublime Text you can click Edit->Paste and Indent, or press Cmd+Shift+v.
 
 ? Do I have to count the spaces?
-* No. We strongly recommend using an editor that supports Particle Notation with syntax highlighting, indentation help and more (if we don't have support for your favorite editor yet, please help us add it!). If you are finding it difficult to use Particle Notation, that's just because the editor support is in the early stages. Please let us know what problems you are having so we can get them fixed.
+* No. We strongly recommend using an editor that supports Particles with syntax highlighting, indentation help and more (if we don't have support for your favorite editor yet, please help us add it!). If you are finding it difficult to use Particles, that's just because the editor support is in the early stages. Please let us know what problems you are having so we can get them fixed.
 
 # For Advanced Scroll Dialect Creators
 
@@ -218,44 +218,44 @@ code
 * Yes! As of ScrollSDK 35, Parsers supports other notations. Originally only prefix notation was supported without writing a decent amount of target code.
 
 ? Can I do inline Trees?
-* Yes! While not supported at the base Particle Notation level, your individual particles can certainly have inline trees. Often your Scroll Dialects will have particles that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Particle Notation, except using something like the pipe character as particleBreakSymbol instead of the newline character.
+* Yes! While not supported at the base Particles level, your individual particles can certainly have inline trees. Often your Scroll Dialects will have particles that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Particles, except using something like the pipe character as particleBreakSymbol instead of the newline character.
 
 # Lisp Related Questions
 
 ? How is this different from S-Expressions?
-* It is largely accurate to say Particle Notation is S-Expressions without parenthesis. But this makes them very different! Particle Notation gives you fewer chances to make errors, easier program concatenation and ad hoc parser writing, easier program synthesis, easier visual programming, easier code analysis, and more.
+* It is largely accurate to say Particles is S-Expressions without parenthesis. But this makes them very different! Particles gives you fewer chances to make errors, easier program concatenation and ad hoc parser writing, easier program synthesis, easier visual programming, easier code analysis, and more.
 
-? Is Particle Notation just Lisp?
-* No. It is largely accurate to say Particle Notation is S-Expressions without parenthesis. However, Particle Notation has a useful geometric isomorphism that S-Expressions/Lisp lack, that might have significant network effects.
+? Is Particles just Lisp?
+* No. It is largely accurate to say Particles is S-Expressions without parenthesis. However, Particles has a useful geometric isomorphism that S-Expressions/Lisp lack, that might have significant network effects.
 
-? What's an example of "ad hoc" parsing that you can do with Particle Notation that you cannot do with S-Expressions?
+? What's an example of "ad hoc" parsing that you can do with Particles that you cannot do with S-Expressions?
 * If you have a Scroll Dialect with a root particleType named `folder`, and you want to rename the keyword of that particleType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
 
-? What's something else you can do with Particle Notation that you can't do with Lisp?
-* Easy program concatenation. For example, in Particle Notation you can create valid new programs simply by appending strings, whereas in Lisp you might first have to do some parentheses removing and inserting.
+? What's something else you can do with Particles that you can't do with Lisp?
+* Easy program concatenation. For example, in Particles you can create valid new programs simply by appending strings, whereas in Lisp you might first have to do some parentheses removing and inserting.
 
 ? What's something else that is worse in Lisp?
-* In Lisp you have to escape certain characters. In Particle Notation, you never need to escape characters. (Note: although you are 100% free to design Scroll Dialects that implement escape characters, that is almost never necessary).
+* In Lisp you have to escape certain characters. In Particles, you never need to escape characters. (Note: although you are 100% free to design Scroll Dialects that implement escape characters, that is almost never necessary).
 
 # History
 
-? Are there any papers written about Particle Notation?
-* You can read the half-baked papers about Particle Notation.
+? Are there any papers written about Particles?
+* You can read the half-baked papers about Particles.
  https://github.com/breck7/research/tree/master/papers papers
 
-* The basic gist of the theory is that all structures are trees, Particle Notation is all you need to represent trees, and by building things up from Particle Notation we might be able to make things simpler _AND better_.
+* The basic gist of the theory is that all structures are trees, Particles is all you need to represent trees, and by building things up from Particles we might be able to make things simpler _AND better_.
 
-? Which language influenced Particle Notation the most?
+? Which language influenced Particles the most?
 * Syntactically there's no question--it was <a href="http://haml.info/">HAML</a>. See the origin story below if you are curious why. Semantically there's been a lot of influences from thousands of languages. Particularly influential ones are Lisp, Haskell, Racket, ANTLR, TypeScript, C#, Python, Scheme, Javascript, COBOL, Rebol, Mathematica, APL, R, Red-Lang, Fortran, Forth, C++, JSON, XML, HTML, CSS, SQL, somewhat, but not necessarily, in that order.
 
-? Who is the first person to discover Particle Notation?
-* Breck Yunits et al. came up with Particle Notation circa 2012. However, it turns out in 2003 Egil Möller <a href="https://srfi.schemers.org/srfi-49/srfi-49.html">proposed</a> "I-Expressions", or "Indentation-sensitive syntax", an alternative to S-Expressions in Scheme that is 80% similar to Particle Notation. A few implementation details weren't ideal, but the core is largely the same.
+? Who is the first person to discover Particles?
+* Breck Yunits et al. came up with Particles circa 2012. However, it turns out in 2003 Egil Möller <a href="https://srfi.schemers.org/srfi-49/srfi-49.html">proposed</a> "I-Expressions", or "Indentation-sensitive syntax", an alternative to S-Expressions in Scheme that is 80% similar to Particles. A few implementation details weren't ideal, but the core is largely the same.
 
 ? Why didn't I-Expressions catch on?
-* Not sure. Perhaps because it was pitched as a different way to write Lisp, and that was it. With Particle Notation, coming up with an improved way to write Lisp was never a primary goal. Our primary goals have been to enable visual programming, simpler APIs, cleaner code and program synthesis, for which Particle Notation is an ideal tool.
+* Not sure. Perhaps because it was pitched as a different way to write Lisp, and that was it. With Particles, coming up with an improved way to write Lisp was never a primary goal. Our primary goals have been to enable visual programming, simpler APIs, cleaner code and program synthesis, for which Particles is an ideal tool.
 
-? How was Particle Notation discovered?
-* If Particle Notation turns out to be a good idea, below is the origin story.
+? How was Particles discovered?
+* If Particles turns out to be a good idea, below is the origin story.
 
 quote
  The year was 2012. Barack Hussein Obama was president, Prettier hadn't been released yet, and humans talked to other humans more than Alexa.
@@ -274,7 +274,7 @@ quote
  
  5 years later I had another "aha" moment when I realized it would also be a good base notation for _any_ type of computer language, and wrote a paper about it. Which went on to be cited over (editor's note: it says "zero" here, is that correct?) times.
 
- It was over 7 years before the first "aha" moment that Particle Notation started to maybe get useful.
+ It was over 7 years before the first "aha" moment that Particles started to maybe get useful.
 
 # Other
 
@@ -284,7 +284,7 @@ quote
 ? How confident are you that this is a good idea?
 * If you round up, 10%. But in the 90% chance that this is not a good idea, attempting to prove that it is a good or a bad idea seems to be a promising line of research.
 
-? What is the Zen of Particle Notation?
+? What is the Zen of Particles?
 * Rule #1. Put it in a Scroll Dialect.
 * End of Rules.
 
