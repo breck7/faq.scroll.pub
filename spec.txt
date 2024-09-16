@@ -17,8 +17,8 @@ The Data Structure
 The basic structure of a Particles object is as follows:
 interface Particle {
   parent: &Particle
-  words: string[]
-  children: Particle[]
+  atoms: string[]
+  subparticles: Particle[]
 }
 
 No Syntax Errors
@@ -30,7 +30,7 @@ Errors can only occur at a higher semantic level in _Parsers_.
 
 Isomorphism to Spreadsheets
 ===========================
-A program in Particles is isomorphic to a spreadsheet. A single row is a node. Words are in cells. You can make a row a child of the row above it by indenting it with an additional blank cell in the head.
+A program in Particles is isomorphic to a spreadsheet. A single row is a particle. Atoms are in cells. You can make a row a subparticle of the row above it by indenting it with an additional blank cell in the head.
 
 Special Symbols
 ===============
@@ -38,12 +38,12 @@ A Particles object is a sequence of bits/bytes/characters(hereafter abbreviated 
 
 Those 3 special chars are:
 - particleBreakSymbol
-- wordBreakSymbol
+- atomBreakSymbol
 - edgeSymbol
 
-*particleBreakSymbol* delimits nodes (lines), *wordBreakSymbol* delimits words (cells), and *edgeSymbol* is used to indicate the parent/child relationship between nodes.
+*particleBreakSymbol* delimits particles (lines), *atomBreakSymbol* delimits atoms (cells/atoms), and *edgeSymbol* is used to indicate the parent/child relationship between particles.
 
-With just particleBreakSymbol and wordBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
+With just particleBreakSymbol and atomBreakSymbol, you get Grid Notation. The addition of edgeSymbol adds the parent/child concept.
 
 By convention those special symbols are:
 
@@ -56,7 +56,7 @@ Decimal: 10
 As string: "\n"
 (Note: On Windows, "\r" is treated the same as any other non-special char)
 
-wordBreakSymbol
+atomBreakSymbol
 space character
 Keyboard: Space Key
 Binary: 00100000
@@ -65,11 +65,11 @@ Decimal: 32
 As string: " "
 
 edgeSymbol
-# by convention is the same as wordBreakSymbol above
+# by convention is the same as atomBreakSymbol above
 
-For better interoperability with existing spreadsheet applications the tab character `\t` can be used for wordBreakSymbol and edgeSymbol.
+For better interoperability with existing spreadsheet applications the tab character `\t` can be used for atomBreakSymbol and edgeSymbol.
 
-Although in theory edgeSymbol and wordBreakSymbol can conflict, in practice, given higher level Parsers, that does not happen.
+Although in theory edgeSymbol and atomBreakSymbol can conflict, in practice, given higher level Parsers, that does not happen.
 
 This is currently the full spec of Particles.
 
@@ -82,4 +82,4 @@ Parsers is an advanced language for building other languages. This spec is writt
  https://sdk.scroll.pub/designer Parsers
  https://scroll.pub Scroll
 
-Built with Scroll v125.6.0
+Built with Scroll v133.0.0

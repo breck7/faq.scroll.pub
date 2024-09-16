@@ -1,7 +1,7 @@
 Particles Frequently Asked Questions
 ====================================
 
-Below is a list of questions that are commonly asked by people who are new to Particles. If you have a question not listed here please ask us on Twitter or by posting a message to the World Wide Scroll Subreddit.
+Below is a list of questions that are commonly asked by people who are new to Particles, Parsers and Scroll. If you have a question not listed here please ask us on Twitter or by posting a message to the World Wide Scroll Subreddit.
  https://particles.scroll.pub/ Particles
  https://x.com/breckyunits Twitter
  https://www.reddit.com/r/WorldWideScroll/ World Wide Scroll Subreddit
@@ -22,21 +22,21 @@ For programmers, this might give you an idea of the structure behind Particles:
 particleBreakSymbol = "\n" // New lines separate particles
 edgeSymbol = " " // Increasing indent to denote parent/child relationship
 interface Particle {
- children: Particle[]
- line: string
+ subparticle: Particle[]
+ atoms: string[]
 }
 
-Code or information represented in a Scroll Dialect therefore always has a similar appearance - it is indented to show structure, rather than (necessarily) using the symbols you might see in traditional programming languages such as C++ and Java - and languages intended for data storage and communication, such as XML and JSON.
+Code or information represented in parsers therefore always has a similar appearance - it is indented to show structure, rather than (necessarily) using the symbols you might see in traditional programming languages such as C++ and Java - and languages intended for data storage and communication, such as XML and JSON.
 
 This simple, yet powerful, base structure may looks a little like Python, Visual Basic, YAML - or 'Domain Specific Languages' written 'on top' of existing programming languages. This isn’t by accident: such languages were designed to look similar to natural language, using words over symbols and indentation to denote structure.
 
-Here’s an example of a minimal HTML document represented in a Scroll Dialect:
+Here’s an example of a minimal HTML document represented in parsers:
 
 html
  body
   div おはようございます
 
-One important feature of Particles is that due to its simplicity and consistency, Scroll Dialects are easy to write - and code or information represented in a Scroll Dialect is easy to syntax check (and highlight) - and autocomplete.
+One important feature of Particles is that due to its simplicity and consistency, parsers are easy to write - and code or information represented in parsers is easy to syntax check (and highlight) - and autocomplete.
 
 (Thank you to @vakradrz for this answer)
 
@@ -46,14 +46,14 @@ There is only 1 binary. Particles is more like binary than it is like a programm
 This is our current stack of computer languages:
 1 Binary => 1,000+ Syntaxes => 10,000+ languages
 In the future we think the stack may look like this:
-1 Binary => 1 Particles => 10,000+ Scroll Languages
+1 Binary => 1 Particles => 10,000+ Scroll microlangs
 
-We all use software tools to build software. Particles makes building these tools easier, and as more people join the Particles ecosystem there may be significant network effects. If Jane is building a Scroll Dialect and tools for automating train schedules, and John is building a Scroll Dialect and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
+We all use software tools to build software. Particles makes building these tools easier, and as more people join the Particles ecosystem there may be significant network effects. If Jane is building parsers and tools for automating train schedules, and John is building parsers and tools for doing cancer research, even though their 2 domains are very different, they can share a lot of the tools and code.
 
-What's the difference between Particles and Scroll Dialects?
-============================================================
-Particles is a base level syntax. Generally users use Scroll Dialects, which make Particles useful. The Scroll Dialect Grammar is a tool to make it easier to build Scroll Dialects.
- https://sdk.scroll.pub/designer/#standard%20grammar Grammar
+What's the difference between Particles, Parsers Scroll?
+========================================================
+Particles is the base level syntax. Generally users use the higher level Scroll, which is built on Particles and makes Particles useful. Scroll is written in Parsers, which is also built on Particles.
+ https://sdk.scroll.pub/designer/#standard%20parsers Parsers
 
 What is special about Particles?
 ================================
@@ -71,7 +71,6 @@ The data science app Ohayo is in part an experiment to test these 3 advantages o
 What is a basic example of Particles for file formats?
 ======================================================
 Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Particles, and better. Let's take a look.
-package.json:
 {
   "name": "mypackage"
   "version": "2.1.1"
@@ -81,7 +80,6 @@ package.json:
     "url": "git://github.com/username/mypackage"
   }
 }
-package.npm:
 name mypackage
 version 2.1.1
 description A package
@@ -89,66 +87,52 @@ repository
  type git
  url git://github.com/username/mypackage
 
-It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.npm` grammar file gets typechecking, autocomplete, tailored syntax highlighting, can support multiline strings, strings without quotes that don't require escaping, comments, and more.
+It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.scroll` file would have Parsers to get typechecking, autocomplete, tailored syntax highlighting, support for multiline strings, strings without quotes that don't require escaping, comments, and more.
 
-Note: the JSON example above works correctly, but JSON and Particles are not equivalent by default, since JSON does not support certain structures and Particles does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use a higher level Scroll Dialect such as Dug that has a 1-to-1 relationship to JSON.
+Note: the JSON example above works correctly, but JSON and Particles are not equivalent by default, since JSON does not support certain structures and Particles does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use Parsers such as Dug that has a 1-to-1 relationship to JSON.
  https://sdk.scroll.pub/designer/#standard%20dug Dug
 
 What is a basic example of Particles for programming languages?
 ===============================================================
 In the example below, Particles is used as a base for a math Scroll Dialect where traditionally S-Expressions/Lisp might be used.
-make8.math:
 multiply
  add 1 1
  add 2 2
-make8.lisp:
 (* (+ 1 1) (+ 2 2))
 The second example contains 13 parts, whereas the first only has 7. There are also infinite ways to represent the second example, since the compiler ignores insignificant whitespace, whereas in the first there is only 1 way to represent that particular structure.
 
 What are some advanced examples of Particles in action?
 =======================================================
-Check out the Ohayo project or the Scroll Dialect Designer.
+Check out the Ohayo project or the Parsers Designer.
  https://github.com/breck7/ohayo Ohayo
- https://sdk.scroll.pub/designer/ Scroll Dialect Designer
+ https://sdk.scroll.pub/designer/ Parsers Designer
 
-How can I build a new Scroll Dialect?
-=====================================
-A good place to start is with our simple $Scroll Dialect Builder$.
- wrap $ http://sdk.scroll.pub/designer/
+How can I extend Scroll?
+========================
+A good place to start is with our simple Parsers Designer.
+ http://sdk.scroll.pub/designer/ Parsers Designer
 
 Where can I use Particles?
 ==========================
 Everywhere! Anywhere you use programming languages or encodings, you can use Particles. Hopefully a Particles Ecosystem will grow, if Particles turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
 
-What are some examples of Scroll microlangs?
-============================================
-There are over a dozen example microlangs in the ScrollSDK GitHub repo. Here's a language that compiles to HTML, a language similar to Make, and a language that does simple math .
-
-Languages that add numbers or compile to HTML are cute, but are there any advanced Scroll Dialect?
-==================================================================================================
-Currently the most advanced somewhat-useful Scroll Dialect is OhayoLang, the dataflow language in the data science studio Ohayo. In 2023, OhayoLang could be a competitive rival to Python or R for 80% of data science tasks. Another very powerful language is Grammar, which is similar to ANTLR or Racket in that it's a language for building languages. However, in 2023 the most powerful Scroll Dialect could be yours!
-
 Structure
 =========
-
-What is the difference between Particles and Scroll Dialects?
-=============================================================
-There is an important distinction between _Particles_ and _Scroll Dialects_. Particles is a simple dumb format for encoding Tree Data structures. Scroll Dialects give you higher level semantics. There is not a single general purpose "Scroll Dialect", like you might expect if you come from the Racket or Lisp worlds. Instead, there are many independent general purpose "Scroll Dialects" with any semantics desired by the language designer(s).
 
 What are the data structures in Particles?
 ==========================================
 This is the base Particles:
 particleBreakSymbol = "\n" // New lines separate particles
-edgeSymbol = " " // Increasing indent to denote parent/child relationship
+edgeSymbol = " " // Increasing indent to denote subparticles
 interface Particle {
   parent: &Particle
-  children: Particle[]
-  line: string
+  subparticles: Particle[]
+  atoms: string[]
 }
 
-The Tree is _the_ data structure in Particles. Types like booleans, ints and vectors only exist at the higher level Scroll Dialect level. The theory behind Particles is that concepts like booleans, ints and vectors are just kinds of Trees.
+This tree-like Node called Particle is _the_ data structure in Particles. Types like booleans, ints and vectors only exist at the higher level once Parsers is added.
 
-Higher level Scroll Dialects are where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
+Parsers and Scroll (which is written in Parsers) is where additional concepts can be added like strings, integers, booleans, control flow, assignment, encapsulation, functions, and so forth.
 
 What are the basic terms when talking about things written in Particles?
 ========================================================================
@@ -156,11 +140,9 @@ Example:
 if true
  print Hello world
 
-In Particles, the units of measure are *words* and *particles*. Each line is equal to one particle. The example program above has 5 words and 2 particles. In this language the particleType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print particle a *child particle* of the line above it, the if particle.
+In Particles, the units of measure are *atoms* and *particles*. Each line is equal to one particle. The example program above has 5 atoms and 2 particles. In this language the particleType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print particle a *subparticle* of the line above it, the if particle.
 
-If you are familiar with Lisp terminology, you can think of words as atoms.
-
-Grammar files add the additional concept of *cells*, which can be thought of as placeholders and type information for words. Grammar files define new languages with *particleTypes* and *cellTypes*. In the example language above, the word "true" would be in a boolean cell type.
+Parsers add the additional concept of *typed atoms*, which can be thought of as placeholders and type information for words. Parsers define new languages with *particleTypes* and *atomTypes*. In the example language above, the word "true" would be in a boolean atom type.
 
 Here is a longer spec.
  https://faq.scroll.pub/spec.html spec
@@ -182,34 +164,36 @@ html
 
 In fact, there is no such thing as an invalid Particles document at the base level, just as there is no such thing as an "invalid binary sequence".
 
-Usually when using Particles you use a higher level grammar, called a Scroll Dialect, and so you can still have invalid programs in that language (because of typos, for example) even though your Particles is valid.
+Usually when using Particles you use a higher level grammar, implemented with Parsers, and so you can still have invalid programs in that language (because of typos, for example) even though your Particles is valid.
 
 How do I escape characters?
 ===========================
-In Particles you never need to escape characters. If your particle spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your particleType definition treats child particles as one block. Some Scroll Dialects might have the notion of escape characters in certain places, but there's no such thing at the Particles base layer.
+In Particles you never need to escape characters. If your particle spans across multiple lines, simply indent the child lines by one space more than their parent, leave the rest of the line as is, and ensure your particleType definition treats child particles as one block. Some parsers might have the notion of escape characters in certain places, but there's no such thing at the Particles base layer.
 
 Does Particles directly map to XML or JSON?
 ===========================================
-No. A subset of Particles does, but for perfect one-to-one matching you'll want to use a Scroll Dialect specifically designed for that language.
+No. A subset of Particles does, but for perfect one-to-one matching you'll want to use parsers specifically designed for that language.
 
 Can I use Particles with any programming language?
 ==================================================
 Yes! The ScrollSDK provides Particles support for TypeScript and Javascript, but someday there may be Particles and Parser implementations in all programming languages, similar to how most languages nowadays have JSON libraries.
+ https://github.com/breck7/scrollsdk ScrollSDK
 
-If you want to build a Particles library for your language, there is a meta project intended to help!
+If you want to build a Particles library for your language, the swim tests are intended to help!
+ https://github.com/breck7/scrollsdk/tree/main/swim swim tests
 
 Project Status
 ==============
 
 Who makes Particles, and is it open source?
 ===========================================
-Particles is free and open source. The Particles Lab is a distributed research group started in Hawaii that works on the core Particles infrastructure projects. The plan is to build the infrastructure needed to test whether Particles is a good idea. If it is, get a broader Particles ecosystem growing.
+Particles is free, open source, and public domain. The Particles Lab is a distributed research group started in Hawaii that works on the core Particles infrastructure projects. The plan is to build the infrastructure needed to test whether Particles is a good idea. If it is, get a broader Particles ecosystem growing.
 
 Is Particles ready for production use?
 ======================================
-Sort of! Particles is ready for early adopters. If you use Particles today, you probably will want to stay up to date with what's happening as the tooling is still rapidly evolving.
+Yes! Particles is ready for early adopters. If you use Particles today, you probably will want to stay up to date with what's happening as the tooling is still rapidly evolving.
 
-If you'd prefer to wait until most of the details are settled, late 2023 is probably a better time to start using it.
+If you'd prefer to wait until most of the details are settled, late 2024 is probably a better time to start using it.
 
 How can I help?
 ===============
@@ -226,12 +210,12 @@ Do I have to count the spaces?
 ==============================
 No. We strongly recommend using an editor that supports Particles with syntax highlighting, indentation help and more (if we don't have support for your favorite editor yet, please help us add it!). If you are finding it difficult to use Particles, that's just because the editor support is in the early stages. Please let us know what problems you are having so we can get them fixed.
 
-For Advanced Scroll Dialect Creators
-====================================
+For Parsers Creators
+====================
 
-What are the benefits to writing a "Grammar" file to create my Scroll Dialect?
-==============================================================================
-By creating 1 file in Grammar, you get a new programming language with autocomplete, syntax highlighting, type-checking, help, integration tests, compiling, and more. The goal of Grammar is to help you create a new, robust, well tested language as easily as possible.
+What are the benefits to writing a parsers?
+===========================================
+By creating 1 file in parsers, you get a new programming language with autocomplete, syntax highlighting, type-checking, help, integration tests, compiling, and more. The goal of Parsers is to help you create a new, robust, well tested language as easily as possible.
 
 Can I use infix notation, postfix notation, or pattern matching?
 ================================================================
@@ -239,7 +223,7 @@ Yes! As of ScrollSDK 35, Parsers supports other notations. Originally only prefi
 
 Can I do inline Trees?
 ======================
-Yes! While not supported at the base Particles level, your individual particles can certainly have inline trees. Often your Scroll Dialects will have particles that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Particles, except using something like the pipe character as particleBreakSymbol instead of the newline character.
+Yes! While not supported at the base Particles level, your individual particles can certainly have inline trees. Often your parsers will have particles that contain content written in traditional languages like Javascript, Lisp, or Python. Or you could even have inline trees written in Particles, except using something like the pipe character as particleBreakSymbol instead of the newline character.
 
 Lisp Related Questions
 ======================
@@ -254,7 +238,7 @@ No. It is largely accurate to say Particles is S-Expressions without parenthesis
 
 What's an example of "ad hoc" parsing that you can do with Particles that you cannot do with S-Expressions?
 ===========================================================================================================
-If you have a Scroll Dialect with a root particleType named `folder`, and you want to rename the keyword of that particleType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
+If you have parsers with a root particleType named `folder`, and you want to rename the keyword of that particleType to `project`, you can easily do it with an ad-hoc regex: `s/^folder/project/`. This would be type safe, even if you started parsing in the middle of the document. You cannot do that with S-Expressions, as you'd have to first parse the document into a Tree data structure, and could not operate on it as a string.
 
 What's something else you can do with Particles that you can't do with Lisp?
 ============================================================================
@@ -262,7 +246,7 @@ Easy program concatenation. For example, in Particles you can create valid new p
 
 What's something else that is worse in Lisp?
 ============================================
-In Lisp you have to escape certain characters. In Particles, you never need to escape characters. (Note: although you are 100% free to design Scroll Dialects that implement escape characters, that is almost never necessary).
+In Lisp you have to escape certain characters. In Particles, you never need to escape characters. (Note: although you are 100% free to design parsers that implement escape characters, that is almost never necessary).
 
 History
 =======
@@ -270,17 +254,19 @@ History
 Are there any papers written about Particles?
 =============================================
 You can read the half-baked papers about Particles.
- https://github.com/breck7/research/tree/master/papers papers
+ https://breckyunits.com/papers.html papers
 
 The basic gist of the theory is that all structures are trees, Particles is all you need to represent trees, and by building things up from Particles we might be able to make things simpler _AND better_.
 
 Which language influenced Particles the most?
 =============================================
 Syntactically there's no question--it was HAML. See the origin story below if you are curious why. Semantically there's been a lot of influences from thousands of languages. Particularly influential ones are Lisp, Haskell, Racket, ANTLR, TypeScript, C#, Python, Scheme, Javascript, COBOL, Rebol, Mathematica, APL, R, Red-Lang, Fortran, Forth, C++, JSON, XML, HTML, CSS, SQL, somewhat, but not necessarily, in that order.
+ http://haml.info/ HAML
 
 Who is the first person to discover Particles?
 ==============================================
 Breck Yunits et al. came up with Particles circa 2012. However, it turns out in 2003 Egil Möller proposed "I-Expressions", or "Indentation-sensitive syntax", an alternative to S-Expressions in Scheme that is 80% similar to Particles. A few implementation details weren't ideal, but the core is largely the same.
+ https://srfi.schemers.org/srfi-49/srfi-49.html proposed
 
 Why didn't I-Expressions catch on?
 ==================================
@@ -319,7 +305,7 @@ If you round up, 10%. But in the 90% chance that this is not a good idea, attemp
 
 What is the Zen of Particles?
 =============================
-Rule #1. Put it in a Scroll Dialect.
+Rule #1. Put it in a parser.
 End of Rules.
 
-Built with Scroll v125.6.0
+Built with Scroll v133.0.0
