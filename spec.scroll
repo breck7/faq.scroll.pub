@@ -78,10 +78,10 @@ Although in theory edgeSymbol and atomBreakSymbol can conflict, in practice, giv
 
 # Parsers
 The structure above defines Particles. Particles is a very basic notation. On top of Particles, people use _Parsers_. You can see examples of higher level Parsers in the Parsers Designer.
- https://sdk.scroll.pub/designer/ Parsers Designer
+ https://sdk.scroll.surf/designer/ Parsers Designer
 
 Parsers is an advanced language for building other languages. This spec is written in a language built on Parsers called Scroll.
- https://sdk.scroll.pub/designer Parsers
- https://scroll.pub Scroll
+ https://sdk.scroll.surf/designer Parsers
+ https://scroll.surf Scroll
 
 footer.scroll

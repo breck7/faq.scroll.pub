@@ -5,7 +5,7 @@ permalink index.html
 thinColumns 4
 
 Below is a list of questions that are commonly asked by people who are new to Particles, Parsers and Scroll. If you have a question not listed here please ask us on Twitter or by posting a message to the World Wide Scroll Subreddit.
- https://particles.scroll.pub/ Particles
+ https://particles.scroll.surf/ Particles
  https://x.com/breckyunits Twitter
  https://www.reddit.com/r/WorldWideScroll/ World Wide Scroll Subreddit
 
@@ -55,7 +55,7 @@ We all use software tools to build software. Particles makes building these tool
 
 ? What's the difference between Particles, Parsers Scroll?
 Particles is the base level syntax. Generally users use the higher level Scroll, which is built on Particles and makes Particles useful. Scroll is written in Parsers, which is also built on Particles.
- https://sdk.scroll.pub/designer/#standard%20parsers Parsers
+ https://sdk.scroll.surf/designer/#standard%20parsers Parsers
 
 ? What is special about Particles?
 Particles may seem similar to notations like JSON, XML, YAML or S-expressions. However, Particles is the most minimal, has an isomorphism to Euclidean geometry, and the concept of syntax errors does not exist. These differences may make Particles substantially different and may cause a _significant improvement_ in computing.
@@ -91,7 +91,7 @@ codeWithHeader package.scroll
 It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.scroll` file would have Parsers to get typechecking, autocomplete, tailored syntax highlighting, support for multiline strings, strings without quotes that don't require escaping, comments, and more.
 
 Note: the JSON example above works correctly, but JSON and Particles are not equivalent by default, since JSON does not support certain structures and Particles does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use Parsers such as Dug that has a 1-to-1 relationship to JSON.
- https://sdk.scroll.pub/designer/#standard%20dug Dug
+ https://sdk.scroll.surf/designer/#standard%20dug Dug
 
 ? What is a basic example of Particles for programming languages?
 In the example below, Particles is used as a base for a math Scroll Dialect where traditionally S-Expressions/Lisp might be used.
@@ -106,11 +106,11 @@ The second example contains 13 parts, whereas the first only has 7. There are al
 ? What are some advanced examples of Particles in action?
 Check out the Ohayo project or the Parsers Designer.
  https://github.com/breck7/ohayo Ohayo
- https://sdk.scroll.pub/designer/ Parsers Designer
+ https://sdk.scroll.surf/designer/ Parsers Designer
 
 ? How can I extend Scroll?
 A good place to start is with our simple Parsers Designer.
- http://sdk.scroll.pub/designer/ Parsers Designer
+ http://sdk.scroll.surf/designer/ Parsers Designer
 
 ? Where can I use Particles?
 Everywhere! Anywhere you use programming languages or encodings, you can use Particles. Hopefully a Particles Ecosystem will grow, if Particles turns out to be a good idea. Until then use it wherever and don't be shy about asking for help.
