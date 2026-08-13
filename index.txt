@@ -1,8 +1,11 @@
+viewSourceUrl https://github.com/breck7/faq.scroll.surf/blob/main
+gazetteCss
+viewSourceButton
 Particles Frequently Asked Questions
 ====================================
 
 Below is a list of questions that are commonly asked by people who are new to Particles, Parsers and Scroll. If you have a question not listed here please ask us on Twitter or by posting a message to the World Wide Scroll Subreddit.
- https://particles.scroll.pub/ Particles
+ https://particles.scroll.surf/ Particles
  https://x.com/breckyunits Twitter
  https://www.reddit.com/r/WorldWideScroll/ World Wide Scroll Subreddit
 
@@ -19,12 +22,14 @@ Particles is a simple syntax that Scroll is built on top of.
 
 For programmers, this might give you an idea of the structure behind Particles:
 
+```
 particleBreakSymbol = "\n" // New lines separate particles
 edgeSymbol = " " // Increasing indent to denote parent/child relationship
 interface Particle {
  subparticle: Particle[]
  atoms: string[]
 }
+```
 
 Code or information represented in parsers therefore always has a similar appearance - it is indented to show structure, rather than (necessarily) using the symbols you might see in traditional programming languages such as C++ and Java - and languages intended for data storage and communication, such as XML and JSON.
 
@@ -32,9 +37,11 @@ This simple, yet powerful, base structure may looks a little like Python, Visual
 
 Here’s an example of a minimal HTML document represented in parsers:
 
+```
 html
  body
   div おはようございます
+```
 
 One important feature of Particles is that due to its simplicity and consistency, parsers are easy to write - and code or information represented in parsers is easy to syntax check (and highlight) - and autocomplete.
 
@@ -53,7 +60,7 @@ We all use software tools to build software. Particles makes building these tool
 What's the difference between Particles, Parsers Scroll?
 ========================================================
 Particles is the base level syntax. Generally users use the higher level Scroll, which is built on Particles and makes Particles useful. Scroll is written in Parsers, which is also built on Particles.
- https://sdk.scroll.pub/designer/#standard%20parsers Parsers
+ https://sdk.scroll.surf/designer/#standard%20parsers Parsers
 
 What is special about Particles?
 ================================
@@ -71,6 +78,7 @@ The data science app Ohayo is in part an experiment to test these 3 advantages o
 What is a basic example of Particles for file formats?
 ======================================================
 Currently all Node.js npm projects contain a `package.json` file. While this is simple, it could be simpler using Particles, and better. Let's take a look.
+```package.json
 {
   "name": "mypackage"
   "version": "2.1.1"
@@ -80,37 +88,44 @@ Currently all Node.js npm projects contain a `package.json` file. While this is 
     "url": "git://github.com/username/mypackage"
   }
 }
+```
+```package.scroll
 name mypackage
 version 2.1.1
 description A package
 repository
  type git
  url git://github.com/username/mypackage
+```
 
 It may look like the only benefit is fewer syntax characters, but there's actually more we can now do. Our `package.scroll` file would have Parsers to get typechecking, autocomplete, tailored syntax highlighting, support for multiline strings, strings without quotes that don't require escaping, comments, and more.
 
 Note: the JSON example above works correctly, but JSON and Particles are not equivalent by default, since JSON does not support certain structures and Particles does not implement all JSON types by default. If you want JSON features such as keys with spaces, numbers, or arrays, you'll need to use Parsers such as Dug that has a 1-to-1 relationship to JSON.
- https://sdk.scroll.pub/designer/#standard%20dug Dug
+ https://sdk.scroll.surf/designer/#standard%20dug Dug
 
 What is a basic example of Particles for programming languages?
 ===============================================================
 In the example below, Particles is used as a base for a math Scroll Dialect where traditionally S-Expressions/Lisp might be used.
+```make8.math
 multiply
  add 1 1
  add 2 2
+```
+```make8.lisp
 (* (+ 1 1) (+ 2 2))
+```
 The second example contains 13 parts, whereas the first only has 7. There are also infinite ways to represent the second example, since the compiler ignores insignificant whitespace, whereas in the first there is only 1 way to represent that particular structure.
 
 What are some advanced examples of Particles in action?
 =======================================================
 Check out the Ohayo project or the Parsers Designer.
  https://github.com/breck7/ohayo Ohayo
- https://sdk.scroll.pub/designer/ Parsers Designer
+ https://sdk.scroll.surf/designer/ Parsers Designer
 
 How can I extend Scroll?
 ========================
 A good place to start is with our simple Parsers Designer.
- http://sdk.scroll.pub/designer/ Parsers Designer
+ http://sdk.scroll.surf/designer/ Parsers Designer
 
 Where can I use Particles?
 ==========================
@@ -122,6 +137,7 @@ Structure
 What are the data structures in Particles?
 ==========================================
 This is the base Particles:
+```
 particleBreakSymbol = "\n" // New lines separate particles
 edgeSymbol = " " // Increasing indent to denote subparticles
 interface Particle {
@@ -129,6 +145,7 @@ interface Particle {
   subparticles: Particle[]
   atoms: string[]
 }
+```
 
 This tree-like Node called Particle is _the_ data structure in Particles. Types like booleans, ints and vectors only exist at the higher level once Parsers is added.
 
@@ -137,15 +154,17 @@ Parsers and Scroll (which is written in Parsers) is where additional concepts ca
 What are the basic terms when talking about things written in Particles?
 ========================================================================
 Example:
+```
 if true
  print Hello world
+```
 
 In Particles, the units of measure are *atoms* and *particles*. Each line is equal to one particle. The example program above has 5 atoms and 2 particles. In this language the particleType is determined by the first words (if and print). Notice how the second line in the program above is indented by one space, this makes the print particle a *subparticle* of the line above it, the if particle.
 
 Parsers add the additional concept of *typed atoms*, which can be thought of as placeholders and type information for words. Parsers define new languages with *particleTypes* and *atomTypes*. In the example language above, the word "true" would be in a boolean atom type.
 
 Here is a longer spec.
- https://faq.scroll.pub/spec.html spec
+ https://faq.scroll.surf/spec.html spec
 
 Does Particles use tabs or spaces?
 ==================================
@@ -158,9 +177,11 @@ Yes. Particles only uses the `\n` character to separate particles/lines. `\r` is
 Does Particles support Unicode or just ASCII?
 =============================================
 Particles supports all encodings. This is perfectly valid Particles:
+```
 html
  body
   div おはようございます
+```
 
 In fact, there is no such thing as an invalid Particles document at the base level, just as there is no such thing as an "invalid binary sequence".
 
@@ -278,7 +299,7 @@ If Particles turns out to be a good idea, below is the origin story.
 
 The year was 2012. Barack Hussein Obama was president, Prettier hadn't been released yet, and humans talked to other humans more than Alexa.
 
-Our startup NudgePad was building a visual web page editor in our office in San Francisco, which was located in the backroom of a warehouse that built wooden pianos by hand. In comparison to Nudge Inc., the wooden piano business was _booming_.
+Our startup <a href="https://www.youtube.com/watch?v=ZWthAz839Og">NudgePad</a> was building a visual web page editor in our office in San Francisco, which was located in the backroom of a warehouse that built wooden pianos by hand. In comparison to Nudge Inc., the wooden piano business was _booming_.
 
 With NudgePad, users could drag, drop and edit their web pages without touching any code. It worked awesome, at least 1 percent of the time. As the user was editing their pages visually, we coded NudgePad to read and write the language HAML, which I had learned at my previous job.
 
@@ -286,7 +307,7 @@ I ended up needing to write my own HAML parser and code generator for reasons lo
 
 Every now and then I would remove some syntax character from our HAML clone and still somehow get everything in NudgePad to work. Eventually the language was just spaces, newlines, and colons.
 
-And then there was an "aha!" moment. I remember I was walking to work, going over the code in my head, and had just reached the 101 overpass when I realized I could dump the colons! I went straight to my desk, opened up my editor, and a couple hours later had removed the colons and everything still worked. I remember at the time thinking that was potentially a profound idea but I _was positive_ someone had built it already. I thought there was no chance it hadn't been invented yet because it was so simple.
+And then there was an "aha!" moment. I remember I was walking to work, going over the code in my head, and had just reached the <a href="https://goo.gl/maps/4cTV2CcpQcX8NPC16">101 overpass</a> when I realized I could dump the colons! I went straight to my desk, opened up my editor, and a couple hours later had removed the colons and everything still worked. I remember at the time thinking that was potentially a profound idea but I _was positive_ someone had built it already. I thought there was no chance it hadn't been invented yet because it was so simple.
 
 But for years I'd ping folks in industry, post on message boards, and do a lot of Google searches. It took me years of searching for it before I thought maybe no had noticed and leveraged this idea before.
 
@@ -308,4 +329,5 @@ What is the Zen of Particles?
 Rule #1. Put it in a parser.
 End of Rules.
 
-Built with Scroll v133.0.0
+viewSourceButton
+Built with Scroll v178.2.3

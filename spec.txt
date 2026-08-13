@@ -1,3 +1,7 @@
+viewSourceUrl https://github.com/breck7/faq.scroll.surf/blob/main
+gazetteCss
+viewSourceButton
+
 Introduction to Two Dimensional Languages
 =========================================
 
@@ -15,16 +19,20 @@ Particles Spec
 The Data Structure
 ==================
 The basic structure of a Particles object is as follows:
+```
 interface Particle {
   parent: &Particle
   atoms: string[]
   subparticles: Particle[]
 }
+```
 
 No Syntax Errors
 ================
 All documents are valid Particles documents. Like binary notation, there are no syntax errors in Particles. For every possible string _abc_:
+```
 new Particle(abc).toString() === abc
+```
 
 Errors can only occur at a higher semantic level in _Parsers_.
 
@@ -47,6 +55,7 @@ With just particleBreakSymbol and atomBreakSymbol, you get Grid Notation. The ad
 
 By convention those special symbols are:
 
+```
 particleBreakSymbol
 newline character
 Keyboard: Enter Key
@@ -55,7 +64,9 @@ Hex: 0A
 Decimal: 10
 As string: "\n"
 (Note: On Windows, "\r" is treated the same as any other non-special char)
+```
 
+```
 atomBreakSymbol
 space character
 Keyboard: Space Key
@@ -63,9 +74,12 @@ Binary: 00100000
 Hex: 20
 Decimal: 32
 As string: " "
+```
 
+```
 edgeSymbol
 # by convention is the same as atomBreakSymbol above
+```
 
 For better interoperability with existing spreadsheet applications the tab character `\t` can be used for atomBreakSymbol and edgeSymbol.
 
@@ -76,10 +90,11 @@ This is currently the full spec of Particles.
 Parsers
 =======
 The structure above defines Particles. Particles is a very basic notation. On top of Particles, people use _Parsers_. You can see examples of higher level Parsers in the Parsers Designer.
- https://sdk.scroll.pub/designer/ Parsers Designer
+ https://sdk.scroll.surf/designer/ Parsers Designer
 
 Parsers is an advanced language for building other languages. This spec is written in a language built on Parsers called Scroll.
- https://sdk.scroll.pub/designer Parsers
- https://scroll.pub Scroll
+ https://sdk.scroll.surf/designer Parsers
+ https://scroll.surf Scroll
 
-Built with Scroll v133.0.0
+viewSourceButton
+Built with Scroll v178.2.3
